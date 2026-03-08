@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="description" content="Loving Homes - منتجع فاخر للكلاب في هونج كونج. رعاية احترافية، غرف مجهزة، وخدمات بيطرية على مدار الساعة."/>
+<title>Loving Homes 🐾 — الرئيسية</title>
+<link rel="stylesheet" href="../css/styles.css"/>
+<style>
+.features-band{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:0;overflow:hidden}
+.features-inner{display:flex;gap:0;white-space:nowrap;animation:marqueeScroll 25s linear infinite}
+.fi{display:inline-flex;align-items:center;gap:12px;padding:16px 36px;border-left:1px solid var(--border);font-size:13px;color:var(--mid);font-weight:500}
+.fi span{color:var(--neon)}
+@keyframes marqueeScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+.why-img{
+  background:var(--bg2);border:1px solid var(--border);border-radius:24px;
+  height:420px;display:flex;align-items:center;justify-content:center;
+  font-size:100px;position:relative;overflow:hidden;
+}
+.why-img::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(0,229,255,.1),transparent 70%)}
+.why-img .dog-big{animation:float 3s ease-in-out infinite}
+.pkg-preview{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.mini-service{
+  background:var(--bg2);border:1px solid var(--border);border-radius:14px;
+  padding:20px;display:flex;align-items:center;gap:14px;
+  transition:transform .3s var(--spring),border-color .25s;
+  text-decoration:none;
+}
+.mini-service:hover{transform:translateY(-4px);border-color:var(--border2)}
+.ms-icon{font-size:28px;flex-shrink:0}
+.ms-text .ms-title{font-size:14px;font-weight:700;color:var(--text)}
+.ms-text .ms-sub{font-size:12px;color:var(--mid)}
+.cta-band{
+  background:linear-gradient(135deg,rgba(0,229,255,.08),rgba(255,107,53,.06));
+  border:1px solid var(--border);border-radius:24px;
+  padding:64px;text-align:center;
+}
+.cta-band .s-title{margin-bottom:12px}
+.cta-band .s-body{margin:0 auto 36px;text-align:center}
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">انتقل إلى المحتوى الرئيسي</a>
+
+<!-- WELCOME SPLASH -->
+<div id="welcome-splash" class="splash-overlay" role="dialog" aria-labelledby="splash-title">
+  <div class="splash-bg"></div>
+  <div class="splash-content">
+    <div class="splash-logo">
+      <div class="splash-icon-wrap">
+        <span class="splash-emoji">🐾</span>
+        <div class="splash-rings"><span></span><span></span><span></span></div>
+      </div>
+      <h1 id="splash-title" class="splash-h1">Loving Homes <em>Hong Kong</em></h1>
+      <p class="splash-sub">منتجع الكلاب الفاخر — حيث تبدأ الرفاهية لأوفى أصدقائك</p>
+    </div>
+    
+    <div class="splash-features">
+      <div class="sf-item">
+        <span class="sf-icon">🏠</span>
+        <div class="sf-text"><strong>إقامة ملكية</strong><span>غرف مكيفة وتلفزيون خاص</span></div>
+      </div>
+      <div class="sf-item">
+        <span class="sf-icon">🏥</span>
+        <div class="sf-text"><strong>رعاية طبية</strong><span>بيطري متاح 24/7</span></div>
+      </div>
+      <div class="sf-item">
+        <span class="sf-icon">🌿</span>
+        <div class="sf-text"><strong>مساحات خضراء</strong><span>مراعي وغابات للتمشية</span></div>
+      </div>
+      <div class="sf-item">
+        <span class="sf-icon">📸</span>
+        <div class="sf-text"><strong>تواصل دائم</strong><span>صور وفيديوهات يومية لكلبك</span></div>
+      </div>
+    </div>
+
+    <button id="splash-enter" class="btn btn-neon splash-btn">
+      استكشف عالمنا ✦
+      <div class="btn-glow"></div>
+    </button>
+  </div>
+</div>
+
+<div id="cursor"></div><div id="cursor-ring"></div>
+<div id="scroll-bar"></div>
+<canvas id="particles-canvas" style="position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5"></canvas>
+
+<!-- NAV -->
+<nav class="navbar" role="navigation" aria-label="التنقل الرئيسي">
+  <a href="index.html" class="nav-logo" aria-label="Loving Homes الصفحة الرئيسية">
+    <div class="nav-logo-icon" aria-hidden="true">🐾</div>
+    <div class="nav-logo-text"><span class="nav-logo-en">Loving Homes</span><span class="nav-logo-ar">منتجع الكلاب الفاخر</span></div>
+  </a>
+  <nav class="nav-links" aria-label="روابط التنقل">
+    <a href="index.html" class="nav-link">الرئيسية</a>
+    <a href="about.html" class="nav-link">من نحن</a>
+    <a href="video.html" class="nav-link">الفيديو</a>
+    <a href="services.html" class="nav-link">الخدمات</a>
+    <a href="packages.html" class="nav-link">الحزم</a>
+    <a href="rooms.html" class="nav-link">الغرف</a>
+    <a href="grooming.html" class="nav-link">الحلاقة</a>
+    <a href="outdoor.html" class="nav-link">الخارجية</a>
+    <a href="veterinary.html" class="nav-link">البيطري</a>
+    <a href="gallery.html" class="nav-link">المعرض</a>
+    <a href="testimonials.html" class="nav-link">آراء العملاء</a>
+    <a href="faq.html" class="nav-link">الأسئلة</a>
+    <a href="contact.html" class="nav-link">تواصل</a>
+  </nav>
+  <a href="contact.html" class="nav-cta">احجز الآن ✦</a>
+  <button class="nav-hamburger" aria-label="فتح القائمة" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav-mobile" aria-label="القائمة المتنقلة">
+  <a href="index.html" class="nav-link">الرئيسية</a>
+  <a href="about.html" class="nav-link">من نحن</a>
+  <a href="video.html" class="nav-link">الفيديو</a>
+  <a href="services.html" class="nav-link">الخدمات</a>
+  <a href="packages.html" class="nav-link">الحزم</a>
+  <a href="rooms.html" class="nav-link">الغرف</a>
+  <a href="grooming.html" class="nav-link">الحلاقة</a>
+  <a href="outdoor.html" class="nav-link">الخارجية</a>
+  <a href="veterinary.html" class="nav-link">البيطري</a>
+  <a href="gallery.html" class="nav-link">المعرض</a>
+  <a href="testimonials.html" class="nav-link">آراء العملاء</a>
+  <a href="faq.html" class="nav-link">الأسئلة</a>
+  <a href="contact.html" class="nav-link">تواصل</a>
+</div>
+
+<!-- HERO -->
+<main id="main">
+<section class="hero" aria-label="الواجهة الرئيسية">
+  <div class="hero-bg"></div>
+  <div class="hk-grid"></div>
+  <div class="hk-skyline" aria-hidden="true"></div>
+  <div class="hero-content">
+    <div class="hero-tag" role="status">🇭🇰 هونج كونج · رعاية فائقة</div>
+    <h1 class="hero-h1">
+      منزل <span class="neon">ثانٍ</span><br>
+      لأحبّائكم<br>
+      <span class="warm">الكلاب</span>
+    </h1>
+    <p class="hero-sub">في Loving Homes، نؤمن أن كلّ كلب يستحق الراحة والحب والرعاية المثلى. منتجعنا الفاخر في قلب هونج كونج يوفر تجربة استثنائية لكلبك أثناء غيابك.</p>
+    <div class="hero-btns">
+      <a href="packages.html" class="btn btn-neon" role="button">استكشف حزمنا ✦</a>
+      <a href="about.html"    class="btn btn-ghost" role="button">تعرف علينا</a>
+    </div>
+  </div>
+  <div class="hero-stats" role="region" aria-label="إحصائيات المنتجع">
+    <div class="hero-stat"><span class="hs-num" data-target="500">0</span><span class="hs-lbl">كلب خدمناه</span></div>
+    <div class="hero-stat"><span class="hs-num" data-target="24">0</span><span class="hs-lbl">خدمة بيطرية / ساعة</span></div>
+    <div class="hero-stat"><span class="hs-num" data-target="4.9">0</span><span class="hs-lbl">تقييم العملاء / 5</span></div>
+    <div class="hero-stat"><span class="hs-num" data-target="5">0</span><span class="hs-lbl">سنوات خبرة</span></div>
+  </div>
+</section>
+
+<!-- FEATURES BAND -->
+<div class="features-band" aria-label="مميزاتنا">
+  <div class="features-inner" aria-hidden="true">
+    <div class="fi"><span>🏠</span> غرف بتدفئة تحت الأرضية</div>
+    <div class="fi"><span>📺</span> تلفزيون في كل غرفة</div>
+    <div class="fi"><span>🚗</span> خدمة التوصيل من وإلى</div>
+    <div class="fi"><span>🌿</span> مراعي خارجية آمنة</div>
+    <div class="fi"><span>🏥</span> بيطري 24 ساعة</div>
+    <div class="fi"><span>✂️</span> صالون حلاقة متكامل</div>
+    <div class="fi"><span>📸</span> صور يومية لكلبك</div>
+    <div class="fi"><span>🎾</span> حظيرة لعب داخلية</div>
+    <!-- duplicate -->
+    <div class="fi"><span>🏠</span> غرف بتدفئة تحت الأرضية</div>
+    <div class="fi"><span>📺</span> تلفزيون في كل غرفة</div>
+    <div class="fi"><span>🚗</span> خدمة التوصيل من وإلى</div>
+    <div class="fi"><span>🌿</span> مراعي خارجية آمنة</div>
+    <div class="fi"><span>🏥</span> بيطري 24 ساعة</div>
+    <div class="fi"><span>✂️</span> صالون حلاقة متكامل</div>
+    <div class="fi"><span>📸</span> صور يومية لكلبك</div>
+    <div class="fi"><span>🎾</span> حظيرة لعب داخلية</div>
+  </div>
+</div>
+
+<!-- WHY US -->
+<section class="section">
+  <div class="container">
+    <div class="why-grid">
+      <div class="reveal-left">
+        <div class="s-eyebrow">لماذا نحن؟</div>
+        <h2 class="s-title">رعاية <em>لا مثيل لها</em></h2>
+        <p class="s-body">نجمع بين الحب الحقيقي للحيوانات والمعايير الاحترافية العالية. فريقنا المتخصص يضمن أن كلبك يقضي وقتاً ممتعاً وآمناً في كل لحظة.</p>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div class="card reveal" style="display:flex;align-items:center;gap:16px;padding:18px 20px">
+            <div class="card-icon" style="margin:0;flex-shrink:0">🛡️</div>
+            <div><div class="card-title" style="margin:0 0 4px;font-size:15px">بيئة آمنة ومراقبة</div><div class="card-desc" style="font-size:12px">مراقبة 24/7 مع كاميرات في جميع أنحاء المنتجع</div></div>
+          </div>
+          <div class="card reveal" style="display:flex;align-items:center;gap:16px;padding:18px 20px">
+            <div class="card-icon warm" style="margin:0;flex-shrink:0">❤️</div>
+            <div><div class="card-title" style="margin:0 0 4px;font-size:15px">اهتمام شخصي</div><div class="card-desc" style="font-size:12px">نعامل كل كلب كما لو كان أحد أفراد عائلتنا</div></div>
+          </div>
+          <div class="card reveal" style="display:flex;align-items:center;gap:16px;padding:18px 20px">
+            <div class="card-icon green" style="margin:0;flex-shrink:0">📱</div>
+            <div><div class="card-title" style="margin:0 0 4px;font-size:15px">تحديثات يومية</div><div class="card-desc" style="font-size:12px">صور ومقاطع فيديو يومية لتطمئن على كلبك</div></div>
+          </div>
+        </div>
+        <div style="margin-top:28px"><a href="about.html" class="btn btn-neon">اعرف أكثر عنا</a></div>
+      </div>
+      <div class="why-img reveal-scale">
+        <div class="dog-big" style="font-size:100px">🐕</div>
+        <div style="position:absolute;bottom:24px;right:24px;background:rgba(0,229,255,.1);border:1px solid var(--border2);border-radius:12px;padding:14px 20px;backdrop-filter:blur(10px)">
+          <div style="font-size:11px;color:var(--neon);font-weight:700;letter-spacing:.1em;text-transform:uppercase">مرخص رسمياً</div>
+          <div style="font-size:13px;color:var(--text);margin-top:2px">AFCD Hong Kong ✓</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MINI SERVICES -->
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="s-eyebrow reveal">خدماتنا</div>
+    <h2 class="s-title reveal">كل ما يحتاجه <em>كلبك</em></h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+      <a href="grooming.html" class="mini-service reveal">
+        <div class="ms-icon">✂️</div>
+        <div class="ms-text"><div class="ms-title">صالون الحلاقة</div><div class="ms-sub">قص وتنظيف احترافي</div></div>
+      </a>
+      <a href="rooms.html" class="mini-service reveal">
+        <div class="ms-icon">🏠</div>
+        <div class="ms-text"><div class="ms-title">الغرف الفاخرة</div><div class="ms-sub">تدفئة وتبريد وتلفزيون</div></div>
+      </a>
+      <a href="veterinary.html" class="mini-service reveal">
+        <div class="ms-icon">🏥</div>
+        <div class="ms-text"><div class="ms-title">الرعاية البيطرية</div><div class="ms-sub">24 ساعة / 7 أيام</div></div>
+      </a>
+      <a href="outdoor.html" class="mini-service reveal">
+        <div class="ms-icon">🌿</div>
+        <div class="ms-text"><div class="ms-title">المراعي الخارجية</div><div class="ms-sub">مساحات آمنة ومفتوحة</div></div>
+      </a>
+      <a href="services.html" class="mini-service reveal">
+        <div class="ms-icon">🚗</div>
+        <div class="ms-text"><div class="ms-title">خدمة التوصيل</div><div class="ms-sub">من وإلى أي مكان</div></div>
+      </a>
+      <a href="outdoor.html" class="mini-service reveal">
+        <div class="ms-icon">🎾</div>
+        <div class="ms-text"><div class="ms-title">حظيرة اللعب</div><div class="ms-sub">داخلية وخارجية</div></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAND -->
+<div class="stats-band" role="region" aria-label="إحصائياتنا">
+  <div class="container">
+    <div class="stats-band-inner">
+      <div class="sb-cell reveal"><span class="sb-num" data-target="500">0</span>+<div class="sb-lbl">كلب سعيد خدمناه</div></div>
+      <div class="sb-cell reveal"><span class="sb-num" data-target="98">0</span>%<div class="sb-lbl">رضا العملاء</div></div>
+      <div class="sb-cell reveal"><span class="sb-num" data-target="15">0</span><div class="sb-lbl">خبير رعاية متخصص</div></div>
+      <div class="sb-cell reveal"><span class="sb-num" data-target="5">0</span><div class="sb-lbl">سنوات في القطاع</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="cta-band reveal-scale">
+      <div class="s-eyebrow" style="justify-content:center">ابدأ الآن</div>
+      <h2 class="s-title" style="text-align:center">هل أنت مستعد لمنح كلبك<br><em>أفضل تجربة؟</em></h2>
+      <p class="s-body" style="text-align:center">تواصل معنا اليوم وسنساعدك في اختيار الحزمة المثالية لكلبك المحبوب.</p>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+        <a href="contact.html" class="btn btn-neon">تواصل معنا الآن 🐾</a>
+        <a href="packages.html" class="btn btn-ghost">استعرض الحزم</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-logo">
+          <div class="nav-logo-icon">🐾</div>
+          <div class="nav-logo-text"><span class="nav-logo-en">Loving Homes</span><span class="nav-logo-ar">منتجع الكلاب الفاخر</span></div>
+        </div>
+        <p class="footer-brand-desc">منتجع فاخر للكلاب في قلب هونج كونج. نوفر بيئة آمنة ومريحة مليئة بالحب والرعاية لكلبك المحبوب.</p>
+        <div class="footer-social" role="list" aria-label="وسائل التواصل الاجتماعي">
+          <a href="#" role="listitem" aria-label="فيسبوك">📘</a>
+          <a href="#" role="listitem" aria-label="إنستغرام">📷</a>
+          <a href="#" role="listitem" aria-label="واتساب">💬</a>
+          <a href="#" role="listitem" aria-label="يوتيوب">▶️</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">الصفحات</div>
+        <ul class="footer-links" role="list">
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="about.html">من نحن</a></li>
+          <li><a href="video.html">الفيديو</a></li>
+          <li><a href="services.html">الخدمات</a></li>
+          <li><a href="packages.html">الحزم والأسعار</a></li>
+          <li><a href="gallery.html">المعرض</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">خدماتنا</div>
+        <ul class="footer-links" role="list">
+          <li><a href="grooming.html">صالون الحلاقة</a></li>
+          <li><a href="rooms.html">الغرف الفاخرة</a></li>
+          <li><a href="veterinary.html">الرعاية البيطرية</a></li>
+          <li><a href="outdoor.html">المرافق الخارجية</a></li>
+          <li><a href="testimonials.html">آراء العملاء</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">تواصل معنا</div>
+        <div class="footer-contact-item"><span class="fci-icon">📍</span><span class="fci-text">Tsim Sha Tsui، هونج كونج</span></div>
+        <div class="footer-contact-item"><span class="fci-icon">📞</span><span class="fci-text">+852 1234 5678</span></div>
+        <div class="footer-contact-item"><span class="fci-icon">✉️</span><span class="fci-text"><a href="mailto:info@lovinghomes.hk">info@lovinghomes.hk</a></span></div>
+        <div class="footer-contact-item"><span class="fci-icon">⏰</span><span class="fci-text">مفتوح 24/7 للطوارئ البيطرية</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Loving Homes Hong Kong. جميع الحقوق محفوظة.</span>
+      <div style="display:flex;gap:20px">
+        <a href="faq.html">الأسئلة الشائعة</a>
+        <a href="contact.html">تواصل معنا</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/app.js"></script>
+</body>
+</html>

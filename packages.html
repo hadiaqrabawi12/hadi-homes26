@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="description" content="حزم وأسعار Loving Homes — المميزة، الكلاسيكية، اليومية، وحزم مخصصة"/>
+<title>الحزم والأسعار — Loving Homes 🐾</title>
+<link rel="stylesheet" href="../css/styles.css"/>
+<style>
+.packages-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:48px}
+.compare-table{width:100%;border-collapse:collapse}
+.compare-table th,.compare-table td{padding:14px 18px;text-align:center;border-bottom:1px solid var(--border)}
+.compare-table th:first-child,.compare-table td:first-child{text-align:right}
+.compare-table thead th{background:var(--bg2);font-size:13px;font-weight:700;color:var(--text)}
+.compare-table thead th.featured-col{background:rgba(0,229,255,.1);color:var(--neon)}
+.compare-table tbody tr:hover{background:var(--bg2)}
+.compare-table td{font-size:13px;color:var(--mid)}
+.compare-table td.yes{color:var(--green);font-size:16px}
+.compare-table td.no{color:var(--low);font-size:16px}
+.custom-pkg{background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:48px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.addons-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.addon-card{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center;cursor:none;transition:transform .3s var(--spring),border-color .25s}
+.addon-card:hover{transform:translateY(-4px);border-color:var(--border2)}
+.addon-icon{font-size:32px;margin-bottom:10px}
+.addon-name{font-size:13px;font-weight:700;color:var(--text);margin-bottom:4px}
+.addon-price{font-size:12px;color:var(--neon);font-weight:600}
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">انتقل للمحتوى</a>
+<div id="cursor"></div><div id="cursor-ring"></div><div id="scroll-bar"></div>
+<canvas id="particles-canvas" style="position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5"></canvas>
+<nav class="navbar"><a href="index.html" class="nav-logo"><div class="nav-logo-icon">🐾</div><div class="nav-logo-text"><span class="nav-logo-en">Loving Homes</span><span class="nav-logo-ar">منتجع الكلاب الفاخر</span></div></a><nav class="nav-links" aria-label="روابط التنقل">
+    <a href="index.html" class="nav-link">الرئيسية</a>
+    <a href="about.html" class="nav-link">من نحن</a>
+    <a href="video.html" class="nav-link">الفيديو</a>
+    <a href="services.html" class="nav-link">الخدمات</a>
+    <a href="packages.html" class="nav-link active">الحزم</a>
+    <a href="rooms.html" class="nav-link">الغرف</a>
+    <a href="grooming.html" class="nav-link">الحلاقة</a>
+    <a href="outdoor.html" class="nav-link">الخارجية</a>
+    <a href="veterinary.html" class="nav-link">البيطري</a>
+    <a href="gallery.html" class="nav-link">المعرض</a>
+    <a href="testimonials.html" class="nav-link">آراء العملاء</a>
+    <a href="faq.html" class="nav-link">الأسئلة</a>
+    <a href="contact.html" class="nav-link">تواصل</a>
+  </nav><a href="contact.html" class="nav-cta">احجز الآن ✦</a><button class="nav-hamburger" aria-label="القائمة"><span></span><span></span><span></span></button></nav>
+<div class="nav-mobile"><a href="index.html" class="nav-link">الرئيسية</a><a href="about.html" class="nav-link">من نحن</a><a href="video.html" class="nav-link">الفيديو</a><a href="services.html" class="nav-link">الخدمات</a><a href="packages.html" class="nav-link">الحزم</a><a href="rooms.html" class="nav-link">الغرف</a><a href="grooming.html" class="nav-link">الحلاقة</a><a href="outdoor.html" class="nav-link">الخارجية</a><a href="veterinary.html" class="nav-link">البيطري</a><a href="gallery.html" class="nav-link">المعرض</a><a href="testimonials.html" class="nav-link">آراء العملاء</a><a href="faq.html" class="nav-link">الأسئلة</a><a href="contact.html" class="nav-link">تواصل</a></div>
+
+<main id="main">
+<div class="page-hero"><div class="hk-grid"></div><div class="container"><nav class="breadcrumb" aria-label="مسار التنقل"><a href="index.html">الرئيسية</a><span class="sep">/</span><span>الحزم والأسعار</span></nav><div class="s-eyebrow reveal">اختر حزمتك</div><h1 class="s-title reveal" style="font-size:clamp(36px,5vw,64px)">الحزم <em>والأسعار</em></h1><p class="s-body reveal" style="margin-bottom:0">ثلاث حزم رئيسية مصممة بعناية، وحزم مخصصة لكل احتياج خاص.</p></div></div>
+
+<section class="section"><div class="container">
+  <div class="packages-grid">
+    <!-- Day Package -->
+    <div class="pkg-card reveal">
+      <div class="pkg-badge gold">اليومي</div>
+      <div class="pkg-name">حزمة اليوم</div>
+      <div class="pkg-sub">مثالية للإقامة القصيرة والزيارات اليومية</div>
+      <div class="pkg-price">HK$<span data-target="280">0</span><span>/يوم</span></div>
+      <div class="pkg-price-note">لكل كلب · الضرائب مشمولة</div>
+      <div class="pkg-divider"></div>
+      <ul class="pkg-features">
+        <li><span>المشي مرتين يومياً</span></li>
+        <li><span>منطقة لعب خارجية (ساعتان)</span></li>
+        <li><span>مسار الرشاقة</span></li>
+        <li><span>حفر حفرة في الرمل</span></li>
+        <li><span>وجبات حسب التغذية المعتادة</span></li>
+        <li><span>تقرير يومي مصور</span></li>
+      </ul>
+      <a href="contact.html" class="btn btn-outline-warm" style="width:100%;justify-content:center;margin-top:8px">احجز اليوم</a>
+    </div>
+    <!-- Classic Package -->
+    <div class="pkg-card featured reveal">
+      <div class="pkg-ribbon">الأكثر طلباً</div>
+      <div class="pkg-badge neon">الكلاسيكية</div>
+      <div class="pkg-name">حزمة كلاسيك</div>
+      <div class="pkg-sub">التوازن المثالي بين الرعاية والقيمة</div>
+      <div class="pkg-price">HK$<span data-target="480">0</span><span>/يوم</span></div>
+      <div class="pkg-price-note">لكل كلب · الضرائب مشمولة</div>
+      <div class="pkg-divider"></div>
+      <ul class="pkg-features">
+        <li><span>المشي ثلاث مرات يومياً</span></li>
+        <li><span>ممارسة ثلاثة أنشطة يومياً</span></li>
+        <li><span>حظيرة لعب داخلية</span></li>
+        <li><span>منطقة استرخاء مريحة</span></li>
+        <li><span>جلسة حلاقة وتنظيف كاملة</span></li>
+        <li><span>غرفة مجهزة بالتدفئة والتبريد</span></li>
+        <li><span>صور وتحديثات يومية</span></li>
+        <li><span>فحص بيطري عند الوصول</span></li>
+      </ul>
+      <a href="contact.html" class="btn btn-neon" style="width:100%;justify-content:center;margin-top:8px">احجز الآن ✦</a>
+    </div>
+    <!-- Premium Package -->
+    <div class="pkg-card reveal">
+      <div class="pkg-badge warm">المميزة</div>
+      <div class="pkg-name">حزمة بريميوم</div>
+      <div class="pkg-sub">أعلى مستوى من الرعاية والاهتمام الشخصي</div>
+      <div class="pkg-price">HK$<span data-target="780">0</span><span>/يوم</span></div>
+      <div class="pkg-price-note">لكل كلب · الضرائب مشمولة</div>
+      <div class="pkg-divider"></div>
+      <ul class="pkg-features">
+        <li><span>المشي أربع مرات يومياً</span></li>
+        <li><span>ممارسة أربعة أنشطة يومياً</span></li>
+        <li><span>مساحة عشب خاصة مخصصة</span></li>
+        <li><span>صور وتحديثات يومية مفصلة</span></li>
+        <li><span>مكافآت حسب اتفاق المالك</span></li>
+        <li><span>غرفة فاخرة مع تلفزيون</span></li>
+        <li><span>جلستا حلاقة أسبوعياً</span></li>
+        <li><span>متابعة بيطرية شخصية</span></li>
+        <li><span>مرشد خاص مخصص طوال الإقامة</span></li>
+      </ul>
+      <a href="contact.html" class="btn btn-warm" style="width:100%;justify-content:center;margin-top:8px">احجز البريميوم</a>
+    </div>
+  </div>
+
+  <!-- Compare Table -->
+  <div class="s-eyebrow reveal">مقارنة شاملة</div>
+  <h2 class="s-title reveal">ماذا تشمل كل <em>حزمة؟</em></h2>
+  <div class="reveal" style="background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;overflow-x:auto">
+    <table class="compare-table" role="table" aria-label="مقارنة الحزم">
+      <thead><tr>
+        <th scope="col">الميزة</th>
+        <th scope="col" style="color:var(--gold)">اليومي</th>
+        <th scope="col" class="featured-col">كلاسيك ⭐</th>
+        <th scope="col" style="color:var(--warm)">بريميوم</th>
+      </tr></thead>
+      <tbody>
+        <tr><td>عدد جلسات المشي</td><td>مرتان</td><td class="featured-col">3 مرات</td><td>4 مرات</td></tr>
+        <tr><td>عدد الأنشطة</td><td>مرتان</td><td class="featured-col">3 أنشطة</td><td>4 أنشطة</td></tr>
+        <tr><td>غرفة مجهزة</td><td class="yes">✓</td><td class="featured-col yes">✓</td><td class="yes">✓</td></tr>
+        <tr><td>تدفئة/تبريد تحت الأرضية</td><td class="no">—</td><td class="featured-col yes">✓</td><td class="yes">✓</td></tr>
+        <tr><td>تلفزيون في الغرفة</td><td class="no">—</td><td class="featured-col yes">✓</td><td class="yes">✓</td></tr>
+        <tr><td>حظيرة لعب داخلية</td><td class="yes">✓</td><td class="featured-col yes">✓</td><td class="yes">✓</td></tr>
+        <tr><td>مساحة عشب خاصة</td><td class="no">—</td><td class="featured-col no">—</td><td class="yes">✓</td></tr>
+        <tr><td>جلسة حلاقة وتنظيف</td><td class="no">—</td><td class="featured-col yes">✓</td><td class="yes">جلستان/أسبوع</td></tr>
+        <tr><td>صور يومية</td><td class="yes">✓</td><td class="featured-col yes">✓</td><td class="yes">✓ مفصلة</td></tr>
+        <tr><td>فحص بيطري عند الوصول</td><td class="yes">✓</td><td class="featured-col yes">✓</td><td class="yes">✓</td></tr>
+        <tr><td>مرشد خاص</td><td class="no">—</td><td class="featured-col no">—</td><td class="yes">✓</td></tr>
+        <tr><td>مكافآت مخصصة</td><td class="no">—</td><td class="featured-col no">—</td><td class="yes">✓</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div></section>
+
+<!-- Add-ons -->
+<section class="section" style="padding-top:0"><div class="container">
+  <div class="s-eyebrow reveal">إضافات اختيارية</div>
+  <h2 class="s-title reveal">خصّص <em>تجربة كلبك</em></h2>
+  <div class="addons-grid">
+    <div class="addon-card reveal"><div class="addon-icon">🛁</div><div class="addon-name">استحمام إضافي</div><div class="addon-price">+HK$80</div></div>
+    <div class="addon-card reveal"><div class="addon-icon">🌲</div><div class="addon-name">جولة الغابة</div><div class="addon-price">+HK$120</div></div>
+    <div class="addon-card reveal"><div class="addon-icon">📸</div><div class="addon-name">جلسة تصوير</div><div class="addon-price">+HK$150</div></div>
+    <div class="addon-card reveal"><div class="addon-icon">💆</div><div class="addon-name">مساج استرخاء</div><div class="addon-price">+HK$100</div></div>
+  </div>
+</div></section>
+
+<!-- Custom Packages -->
+<section class="section" style="padding-top:0"><div class="container">
+  <div class="custom-pkg reveal-scale">
+    <div>
+      <div class="s-eyebrow">مخصصة لك</div>
+      <h2 class="s-title" style="margin-bottom:16px">حزمة <em>مصممة خصيصاً</em></h2>
+      <p style="font-size:15px;color:var(--mid);line-height:1.9;margin-bottom:12px">لكلبك متطلبات خاصة أو تحتاج إقامة طويلة؟ نصمم لك حزمة فريدة تناسب بالضبط ما تحتاجه.</p>
+      <p style="font-size:13px;color:var(--low);margin-bottom:28px">الحزم المخصصة متاحة للإقامات الطويلة، الكلاب ذات الاحتياجات الخاصة، أو من يريدون مزيجاً خاصاً من الخدمات.</p>
+      <a href="contact.html" class="btn btn-neon">اطلب حزمة مخصصة</a>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:center;font-size:80px;animation:float 3s ease-in-out infinite">🎨</div>
+  </div>
+</div></section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-logo">
+          <div class="nav-logo-icon">🐾</div>
+          <div class="nav-logo-text"><span class="nav-logo-en">Loving Homes</span><span class="nav-logo-ar">منتجع الكلاب الفاخر</span></div>
+        </div>
+        <p class="footer-brand-desc">منتجع فاخر للكلاب في قلب هونج كونج. نوفر بيئة آمنة ومريحة مليئة بالحب والرعاية لكلبك المحبوب.</p>
+        <div class="footer-social" role="list" aria-label="وسائل التواصل الاجتماعي">
+          <a href="#" role="listitem" aria-label="فيسبوك">📘</a>
+          <a href="#" role="listitem" aria-label="إنستغرام">📷</a>
+          <a href="#" role="listitem" aria-label="واتساب">💬</a>
+          <a href="#" role="listitem" aria-label="يوتيوب">▶️</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">الصفحات</div>
+        <ul class="footer-links" role="list">
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="about.html">من نحن</a></li>
+          <li><a href="video.html">الفيديو</a></li>
+          <li><a href="services.html">الخدمات</a></li>
+          <li><a href="packages.html">الحزم والأسعار</a></li>
+          <li><a href="gallery.html">المعرض</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">خدماتنا</div>
+        <ul class="footer-links" role="list">
+          <li><a href="grooming.html">صالون الحلاقة</a></li>
+          <li><a href="rooms.html">الغرف الفاخرة</a></li>
+          <li><a href="veterinary.html">الرعاية البيطرية</a></li>
+          <li><a href="outdoor.html">المرافق الخارجية</a></li>
+          <li><a href="testimonials.html">آراء العملاء</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">تواصل معنا</div>
+        <div class="footer-contact-item"><span class="fci-icon">📍</span><span class="fci-text">Tsim Sha Tsui، هونج كونج</span></div>
+        <div class="footer-contact-item"><span class="fci-icon">📞</span><span class="fci-text">+852 1234 5678</span></div>
+        <div class="footer-contact-item"><span class="fci-icon">✉️</span><span class="fci-text"><a href="mailto:info@lovinghomes.hk">info@lovinghomes.hk</a></span></div>
+        <div class="footer-contact-item"><span class="fci-icon">⏰</span><span class="fci-text">مفتوح 24/7 للطوارئ البيطرية</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Loving Homes Hong Kong. جميع الحقوق محفوظة.</span>
+      <div style="display:flex;gap:20px">
+        <a href="faq.html">الأسئلة الشائعة</a>
+        <a href="contact.html">تواصل معنا</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/app.js"></script>
+</body>
+</html>

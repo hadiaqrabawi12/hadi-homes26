@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><meta name="description" content="معرض صور Loving Homes — لحظات سعيدة من حياة كلابنا"/><title>المعرض — Loving Homes 🐾</title><link rel="stylesheet" href="../css/styles.css"/>
+<style>
+.gallery-masonry{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.gi{border-radius:14px;overflow:hidden;background:var(--bg2);border:1px solid var(--border);cursor:pointer;position:relative;display:flex;align-items:center;justify-content:center;transition:transform .35s var(--spring),box-shadow .35s;aspect-ratio:1}
+.gi:hover{transform:translateY(-8px);border-color:var(--border2);box-shadow:0 24px 60px rgba(0,0,0,.5),var(--glow);z-index:2}
+.gi-emoji{font-size:56px;transition:transform .4s var(--spring)}
+.gi:hover .gi-emoji{transform:scale(1.2)}
+.gi-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,229,255,.15),rgba(255,107,53,.1));opacity:0;transition:opacity .3s;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px}
+.gi:hover .gi-overlay{opacity:1}
+.gi-label{font-size:13px;font-weight:700;color:#fff;text-align:center;padding:0 12px}
+.gi-zoom{font-size:24px}
+.gi-bg-1{background:linear-gradient(135deg,#0a1520,#0d2035)}
+.gi-bg-2{background:linear-gradient(135deg,#150a1a,#200d2a)}
+.gi-bg-3{background:linear-gradient(135deg,#0a1a0d,#0d2a15)}
+.gi-bg-4{background:linear-gradient(135deg,#1a140a,#2a1e0d)}
+.gi-bg-5{background:linear-gradient(135deg,#1a0a0a,#2a0d0d)}
+.gi-bg-6{background:linear-gradient(135deg,#0a141a,#0d1f2a)}
+@media(max-width:900px){.gallery-masonry{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.gallery-masonry{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">انتقل للمحتوى</a><div id="cursor"></div><div id="cursor-ring"></div><div id="scroll-bar"></div>
+<canvas id="particles-canvas" style="position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5"></canvas>
+<nav class="navbar"><a href="index.html" class="nav-logo"><div class="nav-logo-icon">🐾</div><div class="nav-logo-text"><span class="nav-logo-en">Loving Homes</span><span class="nav-logo-ar">منتجع الكلاب الفاخر</span></div></a><nav class="nav-links" aria-label="روابط التنقل">
+    <a href="index.html" class="nav-link">الرئيسية</a>
+    <a href="about.html" class="nav-link">من نحن</a>
+    <a href="video.html" class="nav-link">الفيديو</a>
+    <a href="services.html" class="nav-link">الخدمات</a>
+    <a href="packages.html" class="nav-link">الحزم</a>
+    <a href="rooms.html" class="nav-link">الغرف</a>
+    <a href="grooming.html" class="nav-link">الحلاقة</a>
+    <a href="outdoor.html" class="nav-link">الخارجية</a>
+    <a href="veterinary.html" class="nav-link">البيطري</a>
+    <a href="gallery.html" class="nav-link active">المعرض</a>
+    <a href="testimonials.html" class="nav-link">آراء العملاء</a>
+    <a href="faq.html" class="nav-link">الأسئلة</a>
+    <a href="contact.html" class="nav-link">تواصل</a>
+  </nav><a href="contact.html" class="nav-cta">احجز الآن ✦</a><button class="nav-hamburger" aria-label="القائمة"><span></span><span></span><span></span></button></nav>
+<div class="nav-mobile"><a href="index.html" class="nav-link">الرئيسية</a><a href="about.html" class="nav-link">من نحن</a><a href="video.html" class="nav-link">الفيديو</a><a href="services.html" class="nav-link">الخدمات</a><a href="packages.html" class="nav-link">الحزم</a><a href="rooms.html" class="nav-link">الغرف</a><a href="grooming.html" class="nav-link">الحلاقة</a><a href="outdoor.html" class="nav-link">الخارجية</a><a href="veterinary.html" class="nav-link">البيطري</a><a href="gallery.html" class="nav-link">المعرض</a><a href="testimonials.html" class="nav-link">آراء العملاء</a><a href="faq.html" class="nav-link">الأسئلة</a><a href="contact.html" class="nav-link">تواصل</a></div>
+<main id="main">
+<div class="page-hero"><div class="hk-grid"></div><div class="container"><nav class="breadcrumb"><a href="index.html">الرئيسية</a><span class="sep">/</span><span>المعرض</span></nav><div class="s-eyebrow reveal">لحظات لا تُنسى</div><h1 class="s-title reveal" style="font-size:clamp(36px,5vw,64px)">معرض <em>الصور</em></h1><p class="s-body reveal" style="margin-bottom:0">لحظات سعيدة حقيقية من حياة كلابنا في Loving Homes.</p></div></div>
+<section class="section"><div class="container">
+<div class="gallery-masonry reveal">
+<div class="gi" data-label="في المراعي الخضراء" data-filter="outdoor" style="background-image: url('https://thumbs.dreamstime.com/b/springtime-happy-dog-friends-friendly-dogs-having-big-smile-portrait-145158126.jpg'); background-size: cover; background-position: center;">
+  <div class="gi-overlay"><div class="gi-zoom">🔍</div><div class="gi-label">في المراعي الخضراء</div></div>
+</div>
+<div class="gi" data-label="بعد جلسة الحلاقة" data-filter="grooming" style="background-image: url('https://tse4.mm.bing.net/th/id/OIP.yphmYDSgxzjFZx-KNmAQ5wHaEK?rs=1&pid=ImgDetMain&o=7&rm=3'); background-size: cover; background-position: center;">
+  <div class="gi-overlay"><div class="gi-zoom">🔍</div><div class="gi-label">بعد جلسة الحلاقة</div></div>
+</div>
+<div class="gi" data-label="في غرفة السويت" data-filter="rooms" style="background-image: url('https://i.pinimg.com/1200x/7b/6e/5f/7b6e5f08cc1a9d02a5d1678033b0c6e8.jpg'); background-size: cover; background-position: center;">
+  <div class="gi-overlay"><div class="gi-zoom">🔍</div><div class="gi-label">في غرفة السويت</div></div>
+</div>
+<div class="gi" data-label="غرفة ديلوكس" data-filter="rooms" style="background-image: url('https://i.pinimg.com/1200x/24/6a/d1/246ad1d32a54fc843e4757b57f0c4c74.jpg'); background-size: cover; background-position: center;">
+  <div class="gi-overlay"><div class="gi-zoom">🔍</div><div class="gi-label">غرفة ديلوكس</div></div>
+</div>
+<div class="gi" data-label="وقت اللعب" data-filter="play" style="background-image: url('https://ruffhdt.com/wp-content/uploads/2023/01/4-1.jpg'); background-size: cover; background-position: center;">
+  <div class="gi-overlay"><div class="gi-zoom">🔍</div><div class="gi-label">وقت اللعب</div></div>
+</div>
+<div class="gi" data-label="جولة الغابة" data-filter="outdoor" style="background-image: url('https://pic.i7lm.com/wp-content/uploads/2020/01/8-27.jpg'); background-size: cover; background-position: center;">
+  <div class="gi-overlay"><div class="gi-zoom">🔍</div><div class="gi-label">جولة الغابة</div></div>
+</div>
+<div class="gi" data-label="حفرة الرمل" data-filter="play" style="background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20220525/pngtree-at-the-seashore-a-pale-dog-and-a-tawny-dog-frolicking-together-photo-image_36760492.jpg'); background-size: cover; background-position: center;">
+  <div class="gi-overlay"><div class="gi-zoom">🔍</div><div class="gi-label">حفرة الرمل</div></div>
+</div>
+</div>
+</div></section>
+</main>
+<footer class="footer"><div class="container"><div class="footer-grid"><div><div class="footer-brand-logo"><div class="nav-logo-icon">🐾</div><div class="nav-logo-text"><span class="nav-logo-en">Loving Homes</span><span class="nav-logo-ar">منتجع الكلاب الفاخر</span></div></div><p class="footer-brand-desc">منتجع فاخر للكلاب في هونج كونج.</p><div class="footer-social"><a href="#" aria-label="فيسبوك">📘</a><a href="#" aria-label="إنستغرام">📷</a><a href="#" aria-label="واتساب">💬</a></div></div><div><div class="footer-col-title">الصفحات</div><ul class="footer-links"><li><a href="index.html">الرئيسية</a></li><li><a href="services.html">الخدمات</a></li><li><a href="packages.html">الحزم</a></li></ul></div><div><div class="footer-col-title">خدماتنا</div><ul class="footer-links"><li><a href="grooming.html">الحلاقة</a></li><li><a href="rooms.html">الغرف</a></li><li><a href="veterinary.html">البيطري</a></li><li><a href="testimonials.html">آراء العملاء</a></li></ul></div><div><div class="footer-col-title">تواصل</div><div class="footer-contact-item"><span class="fci-icon">📞</span><span class="fci-text">+852 1234 5678</span></div></div></div><div class="footer-bottom"><span>© 2025 Loving Homes Hong Kong.</span><a href="faq.html">الأسئلة</a></div></div></footer>
+<script src="../js/app.js"></script>
+</body>
+</html>

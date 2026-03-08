@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="description" content="آراء وتقييمات عملاء Loving Homes — ماذا يقول أصحاب الكلاب عنا"/>
+<title>آراء العملاء — Loving Homes 🐾</title>
+<link rel="stylesheet" href="../css/styles.css"/>
+<style>
+.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.featured-testimonial{
+  background:var(--surface);border:1px solid var(--border2);
+  border-radius:24px;padding:44px;margin-bottom:40px;
+  position:relative;overflow:hidden;
+}
+.featured-testimonial::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--neon),var(--warm),var(--pink));
+}
+.rating-overview{
+  display:grid;grid-template-columns:200px 1fr;gap:48px;
+  align-items:center;background:var(--surface);
+  border:1px solid var(--border);border-radius:20px;
+  padding:40px;margin-bottom:48px;
+}
+.ro-big{text-align:center}
+.ro-num{font-family:'Tajawal',sans-serif;font-size:72px;font-weight:800;color:var(--gold);line-height:1}
+.ro-stars{font-size:24px;color:var(--gold);margin:8px 0}
+.ro-count{font-size:13px;color:var(--mid)}
+.ro-bars{display:flex;flex-direction:column;gap:14px}
+.rb-row{display:grid;grid-template-columns:50px 1fr 40px;align-items:center;gap:14px}
+.rb-label{font-size:13px;color:var(--mid);text-align:right}
+.rb-bar{height:8px;background:var(--bg3);border-radius:100px;overflow:hidden}
+.rb-fill{height:100%;background:var(--gold);border-radius:100px;transition:width 1.2s cubic-bezier(.22,1,.36,1)}
+.rb-count{font-size:12px;color:var(--mid)}
+.trust-badges{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:52px}
+.tb{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:24px;text-align:center;transition:border-color .25s,transform .3s var(--spring)}
+.tb:hover{border-color:var(--border2);transform:translateY(-4px)}
+.tb-icon{font-size:32px;margin-bottom:10px}
+.tb-num{font-family:'Tajawal',sans-serif;font-size:28px;font-weight:800;color:var(--neon);margin-bottom:4px}
+.tb-label{font-size:12px;color:var(--mid)}
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">انتقل للمحتوى</a>
+<div id="cursor"></div><div id="cursor-ring"></div><div id="scroll-bar"></div>
+
+<nav class="navbar">
+  <a href="index.html" class="nav-logo"><div class="nav-logo-icon">🐾</div><div class="nav-logo-text"><span class="nav-logo-en">Loving Homes</span><span class="nav-logo-ar">منتجع الكلاب الفاخر</span></div></a>
+  <nav class="nav-links" aria-label="روابط التنقل">
+    <a href="index.html" class="nav-link">الرئيسية</a>
+    <a href="about.html" class="nav-link">من نحن</a>
+    <a href="video.html" class="nav-link">الفيديو</a>
+    <a href="services.html" class="nav-link">الخدمات</a>
+    <a href="packages.html" class="nav-link">الحزم</a>
+    <a href="rooms.html" class="nav-link">الغرف</a>
+    <a href="grooming.html" class="nav-link">الحلاقة</a>
+    <a href="outdoor.html" class="nav-link">الخارجية</a>
+    <a href="veterinary.html" class="nav-link">البيطري</a>
+    <a href="gallery.html" class="nav-link">المعرض</a>
+    <a href="testimonials.html" class="nav-link active">آراء العملاء</a>
+    <a href="faq.html" class="nav-link">الأسئلة</a>
+    <a href="contact.html" class="nav-link">تواصل</a>
+  </nav>
+  <a href="contact.html" class="nav-cta">احجز الآن ✦</a>
+  <button class="nav-hamburger" aria-label="القائمة"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile">
+  <a href="index.html" class="nav-link">الرئيسية</a><a href="about.html" class="nav-link">من نحن</a>
+  <a href="video.html" class="nav-link">الفيديو</a>
+  <a href="services.html" class="nav-link">الخدمات</a><a href="packages.html" class="nav-link">الحزم</a>
+  <a href="rooms.html" class="nav-link">الغرف</a><a href="grooming.html" class="nav-link">الحلاقة</a>
+  <a href="outdoor.html" class="nav-link">الخارجية</a><a href="veterinary.html" class="nav-link">البيطري</a>
+  <a href="gallery.html" class="nav-link">المعرض</a><a href="testimonials.html" class="nav-link">آراء العملاء</a>
+  <a href="faq.html" class="nav-link">الأسئلة</a><a href="contact.html" class="nav-link">تواصل</a>
+</div>
+
+<main id="main">
+<div class="page-hero">
+  <div class="hk-grid"></div>
+  <div class="container">
+    <nav class="breadcrumb"><a href="index.html">الرئيسية</a><span class="sep">/</span><span>آراء العملاء</span></nav>
+    <div class="s-eyebrow reveal">ماذا يقولون؟</div>
+    <h1 class="s-title reveal" style="font-size:clamp(36px,5vw,64px)">آراء <em>عملائنا</em></h1>
+    <p class="s-body reveal" style="margin-bottom:0">أكثر من 500 عائلة وثقت بنا رعاية كلابها المحبوبة.</p>
+  </div>
+</div>
+
+<section class="section"><div class="container">
+
+  <!-- Rating Overview -->
+  <div class="rating-overview reveal-scale">
+    <div class="ro-big">
+      <div class="ro-num">4.9</div>
+      <div class="ro-stars">★★★★★</div>
+      <div class="ro-count">بناءً على 247 تقييم موثّق</div>
+    </div>
+    <div class="ro-bars">
+      <div class="rb-row"><span class="rb-label">5 ★</span><div class="rb-bar"><div class="rb-fill" data-w="89%"></div></div><span class="rb-count">89%</span></div>
+      <div class="rb-row"><span class="rb-label">4 ★</span><div class="rb-bar"><div class="rb-fill" data-w="8%"></div></div><span class="rb-count">8%</span></div>
+      <div class="rb-row"><span class="rb-label">3 ★</span><div class="rb-bar"><div class="rb-fill" data-w="2%"></div></div><span class="rb-count">2%</span></div>
+      <div class="rb-row"><span class="rb-label">2 ★</span><div class="rb-bar"><div class="rb-fill" data-w="1%"></div></div><span class="rb-count">1%</span></div>
+      <div class="rb-row"><span class="rb-label">1 ★</span><div class="rb-bar"><div class="rb-fill" data-w="0%"></div></div><span class="rb-count">0%</span></div>
+    </div>
+  </div>
+
+  <!-- Featured Testimonial -->
+  <div class="featured-testimonial reveal-scale">
+    <span class="tc-quote">"</span>
+    <p style="font-size:18px;line-height:2;color:var(--text);margin-bottom:24px">تركت "ماكس" في Loving Homes لأسبوعين كاملين وكنت قلقة جداً في البداية. لكن منذ اليوم الأول بدأت أتلقى صوراً ومقاطع فيديو رائعة تريني كم هو سعيد! عاد إليّ أكثر نشاطاً وحباً مما غادر. لن أذهب لأي مكان آخر أبداً.</p>
+    <div class="tc-author">
+      <div class="tc-avatar">👩</div>
+      <div>
+        <div class="tc-name">نادية الحسن</div>
+        <div class="tc-sub">صاحبة "ماكس" — Golden Retriever · عميلة منذ 2022</div>
+      </div>
+      <div class="tc-stars" style="margin-right:auto;margin-bottom:0">★★★★★</div>
+    </div>
+  </div>
+
+  <!-- Reviews Grid -->
+  <div class="testimonials-grid">
+    <div class="testimonial-card reveal">
+      <span class="tc-quote">"</span><div class="tc-stars">★★★★★</div>
+      <p class="tc-text">الفريق محترف جداً ويتعامل مع كلبي بحب حقيقي. كلبي يقفز فرحاً كل مرة يرى سيارتهم أمام البيت! أنصح به بشدة.</p>
+      <div class="tc-author"><div class="tc-avatar">👨</div><div><div class="tc-name">أحمد الشمري</div><div class="tc-sub">صاحب "روكي" — Husky</div></div></div>
+    </div>
+    <div class="testimonial-card reveal">
+      <span class="tc-quote">"</span><div class="tc-stars">★★★★★</div>
+      <p class="tc-text">الغرف نظيفة ومريحة جداً. كلبتي "لولو" كانت تنام على سرير أفضل من سريري! الصور اليومية كانت تريحني كثيراً.</p>
+      <div class="tc-author"><div class="tc-avatar">👩</div><div><div class="tc-name">مريم خليل</div><div class="tc-sub">صاحبة "لولو" — Poodle</div></div></div>
+    </div>
+    <div class="testimonial-card reveal">
+      <span class="tc-quote">"</span><div class="tc-stars">★★★★★</div>
+      <p class="tc-text">الخدمة البيطرية 24 ساعة أعطتني طمأنينة مطلقة. كلبي يعاني من حساسية ومعهم تم التعامل معها باحترافية عالية.</p>
+      <div class="tc-author"><div class="tc-avatar">👨</div><div><div class="tc-name">خالد العمري</div><div class="tc-sub">صاحب "بيلو" — Beagle</div></div></div>
+    </div>
+    <div class="testimonial-card reveal">
+      <span class="tc-quote">"</span><div class="tc-stars">★★★★★</div>
+      <p class="tc-text">صالون الحلاقة رائع! كلبي عاد وكأنه نجم فيلم. الفريق يعرف السلالات جيداً ويقص الشعر بشكل مثالي للسلالة.</p>
+      <div class="tc-author"><div class="tc-avatar">👩</div><div><div class="tc-name">سارة النجار</div><div class="tc-sub">صاحبة "كوكو" — Shih Tzu</div></div></div>
+    </div>
+    <div class="testimonial-card reveal">
+      <span class="tc-quote">"</span><div class="tc-stars">★★★★★</div>
+      <p class="tc-text">خدمة التوصيل ممتازة. السائق كان لطيفاً جداً مع كلبي وصل في الوقت المحدد تماماً. راحة بال حقيقية من اللحظة الأولى.</p>
+      <div class="tc-author"><div class="tc-avatar">👨</div><div><div class="tc-name">علي حسن</div><div class="tc-sub">صاحب "نيرو" — German Shepherd</div></div></div>
+    </div>
+    <div class="testimonial-card reveal">
+      <span class="tc-quote">"</span><div class="tc-stars">★★★★★</div>
+      <p class="tc-text">جولات الغابة رائعة! كلبي عاد مبسوطاً جداً يبدو أنه يستمتع بالطبيعة أكثر من البيت. سأحجز له كل شهر!</p>
+      <div class="tc-author"><div class="tc-avatar">👩</div><div><div class="tc-name">ليلى وونغ</div><div class="tc-sub">صاحبة "تيدي" — Labrador</div></div></div>
+    </div>
+    <div class="testimonial-card reveal">
+      <span class="tc-quote">"</span><div class="tc-stars">★★★★★</div>
+      <p class="tc-text">اشتركت في الحزمة المميزة لثلاثة أسابيع. التقارير اليومية المفصلة والصور كانت ترسم البسمة على وجهي كل صباح.</p>
+      <div class="tc-author"><div class="tc-avatar">👨</div><div><div class="tc-name">مصطفى الحربي</div><div class="tc-sub">صاحب "آيس" — Samoyed</div></div></div>
+    </div>
+    <div class="testimonial-card reveal">
+      <span class="tc-quote">"</span><div class="tc-stars">★★★★★</div>
+      <p class="tc-text">كلبي كبير في السن ويحتاج رعاية خاصة. الفريق تعامل معه بصبر وحب غير عادي. شعرت أنهم يحبونه كما أحبه أنا.</p>
+      <div class="tc-author"><div class="tc-avatar">👩</div><div><div class="tc-name">هند المطيري</div><div class="tc-sub">صاحبة "شيرو" — Shiba Inu</div></div></div>
+    </div>
+    <div class="testimonial-card reveal">
+      <span class="tc-quote">"</span><div class="tc-stars">★★★★★</div>
+      <p class="tc-text">المنشأة نظيفة ومنظمة وحديثة. بمجرد رؤيتها اطمأننت تماماً. الموظفون يعرفون أسماء كل الكلاب ويتحدثون معهم!</p>
+      <div class="tc-author"><div class="tc-avatar">👨</div><div><div class="tc-name">كريم فؤاد</div><div class="tc-sub">صاحب "باكو" — Pomeranian</div></div></div>
+    </div>
+  </div>
+
+  <!-- Trust Badges -->
+  <div class="trust-badges">
+    <div class="tb reveal"><div class="tb-icon">⭐</div><div class="tb-num">4.9</div><div class="tb-label">تقييم Google</div></div>
+    <div class="tb reveal"><div class="tb-icon">💬</div><div class="tb-num">247+</div><div class="tb-label">تقييم موثّق</div></div>
+    <div class="tb reveal"><div class="tb-icon">🔄</div><div class="tb-num">94%</div><div class="tb-label">عملاء يعودون</div></div>
+    <div class="tb reveal"><div class="tb-icon">🏆</div><div class="tb-num">#1</div><div class="tb-label">في هونج كونج</div></div>
+  </div>
+
+</div></section>
+
+<section class="section" style="padding-top:0"><div class="container">
+  <div style="text-align:center;background:linear-gradient(135deg,rgba(0,229,255,.08),rgba(255,107,53,.06));border:1px solid var(--border);border-radius:24px;padding:64px" class="reveal-scale">
+    <div style="font-size:56px;margin-bottom:16px">❤️</div>
+    <h2 class="s-title" style="margin-bottom:12px">انضم لعائلتنا <em>السعيدة</em></h2>
+    <p class="s-body" style="text-align:center;margin:0 auto 36px">احجز الآن وكن جزءاً من قصص النجاح التي نفخر بها كل يوم.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+      <a href="contact.html" class="btn btn-neon">احجز الآن 🐾</a>
+      <a href="packages.html" class="btn btn-ghost">استعرض الحزم</a>
+    </div>
+  </div>
+</div></section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-logo"><div class="nav-logo-icon">🐾</div><div class="nav-logo-text"><span class="nav-logo-en">Loving Homes</span><span class="nav-logo-ar">منتجع الكلاب الفاخر</span></div></div>
+        <p class="footer-brand-desc">منتجع فاخر للكلاب في قلب هونج كونج. نوفر بيئة آمنة مليئة بالحب لكلبك المحبوب.</p>
+        <div class="footer-social"><a href="#" aria-label="فيسبوك">📘</a><a href="#" aria-label="إنستغرام">📷</a><a href="#" aria-label="واتساب">💬</a><a href="#" aria-label="يوتيوب">▶️</a></div>
+      </div>
+      <div><div class="footer-col-title">الصفحات</div><ul class="footer-links"><li><a href="index.html">الرئيسية</a></li><li><a href="about.html">من نحن</a></li><li><a href="services.html">الخدمات</a></li><li><a href="packages.html">الحزم</a></li><li><a href="gallery.html">المعرض</a></li></ul></div>
+      <div><div class="footer-col-title">خدماتنا</div><ul class="footer-links"><li><a href="grooming.html">صالون الحلاقة</a></li><li><a href="rooms.html">الغرف الفاخرة</a></li><li><a href="veterinary.html">الرعاية البيطرية</a></li><li><a href="outdoor.html">المرافق الخارجية</a></li><li><a href="testimonials.html">آراء العملاء</a></li></ul></div>
+      <div><div class="footer-col-title">تواصل معنا</div><div class="footer-contact-item"><span class="fci-icon">📍</span><span class="fci-text">Tsim Sha Tsui، هونج كونج</span></div><div class="footer-contact-item"><span class="fci-icon">📞</span><span class="fci-text">+852 1234 5678</span></div><div class="footer-contact-item"><span class="fci-icon">✉️</span><span class="fci-text"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4028252c2c2f002c2f36292e27282f2d25336e282b">[email&#160;protected]</a></span></div><div class="footer-contact-item"><span class="fci-icon">⏰</span><span class="fci-text">مفتوح 24/7 للطوارئ</span></div></div>
+    </div>
+    <div class="footer-bottom"><span>© 2025 Loving Homes Hong Kong. جميع الحقوق محفوظة.</span><div style="display:flex;gap:20px"><a href="faq.html">الأسئلة الشائعة</a><a href="contact.html">سياسة الخصوصية</a></div></div>
+  </div>
+</footer>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="../js/app.js"></script>
+<script>
+// Animate rating bars on scroll
+document.addEventListener('DOMContentLoaded', () => {
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      e.target.querySelectorAll('.rb-fill[data-w]').forEach(bar => {
+        setTimeout(() => { 
+          bar.style.width = bar.dataset.w;
+        }, 300);
+      });
+      obs.unobserve(e.target);
+    });
+  }, { threshold: 0.5 });
+  const ro = document.querySelector('.rating-overview');
+  if (ro) obs.observe(ro);
+});
+</script>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-logo">
+          <div class="nav-logo-icon">🐾</div>
+          <div class="nav-logo-text"><span class="nav-logo-en">Loving Homes</span><span class="nav-logo-ar">منتجع الكلاب الفاخر</span></div>
+        </div>
+        <p class="footer-brand-desc">منتجع فاخر للكلاب في قلب هونج كونج. نوفر بيئة آمنة ومريحة مليئة بالحب والرعاية لكلبك المحبوب.</p>
+        <div class="footer-social" role="list" aria-label="وسائل التواصل الاجتماعي">
+          <a href="#" role="listitem" aria-label="فيسبوك">📘</a>
+          <a href="#" role="listitem" aria-label="إنستغرام">📷</a>
+          <a href="#" role="listitem" aria-label="واتساب">💬</a>
+          <a href="#" role="listitem" aria-label="يوتيوب">▶️</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">الصفحات</div>
+        <ul class="footer-links" role="list">
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="about.html">من نحن</a></li>
+          <li><a href="video.html">الفيديو</a></li>
+          <li><a href="services.html">الخدمات</a></li>
+          <li><a href="packages.html">الحزم والأسعار</a></li>
+          <li><a href="gallery.html">المعرض</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">خدماتنا</div>
+        <ul class="footer-links" role="list">
+          <li><a href="grooming.html">صالون الحلاقة</a></li>
+          <li><a href="rooms.html">الغرف الفاخرة</a></li>
+          <li><a href="veterinary.html">الرعاية البيطرية</a></li>
+          <li><a href="outdoor.html">المرافق الخارجية</a></li>
+          <li><a href="testimonials.html">آراء العملاء</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">تواصل معنا</div>
+        <div class="footer-contact-item"><span class="fci-icon">📍</span><span class="fci-text">Tsim Sha Tsui، هونج كونج</span></div>
+        <div class="footer-contact-item"><span class="fci-icon">📞</span><span class="fci-text">+852 1234 5678</span></div>
+        <div class="footer-contact-item"><span class="fci-icon">✉️</span><span class="fci-text"><a href="mailto:info@lovinghomes.hk">info@lovinghomes.hk</a></span></div>
+        <div class="footer-contact-item"><span class="fci-icon">⏰</span><span class="fci-text">مفتوح 24/7 للطوارئ البيطرية</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Loving Homes Hong Kong. جميع الحقوق محفوظة.</span>
+      <div style="display:flex;gap:20px">
+        <a href="faq.html">الأسئلة الشائعة</a>
+        <a href="contact.html">تواصل معنا</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html> 

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="description" content="صالون حلاقة Loving Homes — تجميل احترافي لكلبك في هونج كونج"/>
+<title>صالون الحلاقة — Loving Homes 🐾</title>
+<link rel="stylesheet" href="../css/styles.css"/>
+<style>
+.salon-hero-split{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.salon-visual{background:var(--bg2);border:1px solid var(--border);border-radius:24px;height:400px;display:flex;align-items:center;justify-content:center;font-size:100px;position:relative;overflow:hidden}
+.salon-visual::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50%,rgba(0,229,255,.08),transparent 70%)}
+.services-tabs-wrap{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:36px}
+.grooming-menu{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gm-item{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:20px;cursor:none;transition:transform .3s var(--spring),border-color .25s}
+.gm-item:hover{transform:translateY(-4px);border-color:var(--border2)}
+.gm-icon{font-size:28px;margin-bottom:10px}
+.gm-name{font-size:14px;font-weight:700;color:var(--text);margin-bottom:4px}
+.gm-desc{font-size:12px;color:var(--mid);margin-bottom:8px;line-height:1.6}
+.gm-price{font-size:13px;color:var(--neon);font-weight:700}
+.breeds-note{background:rgba(0,229,255,.06);border:1px solid var(--border2);border-radius:14px;padding:24px;margin-top:32px}
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">انتقل للمحتوى</a>
+<div id="cursor"></div><div id="cursor-ring"></div><div id="scroll-bar"></div>
+<canvas id="particles-canvas" style="position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5"></canvas>
+<nav class="navbar"><a href="index.html" class="nav-logo"><div class="nav-logo-icon">🐾</div><div class="nav-logo-text"><span class="nav-logo-en">Loving Homes</span><span class="nav-logo-ar">منتجع الكلاب الفاخر</span></div></a><nav class="nav-links" aria-label="روابط التنقل">
+    <a href="index.html" class="nav-link">الرئيسية</a>
+    <a href="about.html" class="nav-link">من نحن</a>
+    <a href="video.html" class="nav-link">الفيديو</a>
+    <a href="services.html" class="nav-link">الخدمات</a>
+    <a href="packages.html" class="nav-link">الحزم</a>
+    <a href="rooms.html" class="nav-link">الغرف</a>
+    <a href="grooming.html" class="nav-link active">الحلاقة</a>
+    <a href="outdoor.html" class="nav-link">الخارجية</a>
+    <a href="veterinary.html" class="nav-link">البيطري</a>
+    <a href="gallery.html" class="nav-link">المعرض</a>
+    <a href="testimonials.html" class="nav-link">آراء العملاء</a>
+    <a href="faq.html" class="nav-link">الأسئلة</a>
+    <a href="contact.html" class="nav-link">تواصل</a>
+  </nav><a href="contact.html" class="nav-cta">احجز الآن ✦</a><button class="nav-hamburger" aria-label="القائمة"><span></span><span></span><span></span></button></nav>
+<div class="nav-mobile"><a href="index.html" class="nav-link">الرئيسية</a><a href="about.html" class="nav-link">من نحن</a><a href="video.html" class="nav-link">الفيديو</a><a href="services.html" class="nav-link">الخدمات</a><a href="packages.html" class="nav-link">الحزم</a><a href="rooms.html" class="nav-link">الغرف</a><a href="grooming.html" class="nav-link">الحلاقة</a><a href="outdoor.html" class="nav-link">الخارجية</a><a href="veterinary.html" class="nav-link">البيطري</a><a href="gallery.html" class="nav-link">المعرض</a><a href="testimonials.html" class="nav-link">آراء العملاء</a><a href="faq.html" class="nav-link">الأسئلة</a><a href="contact.html" class="nav-link">تواصل</a></div>
+
+<main id="main">
+<div class="page-hero"><div class="hk-grid"></div><div class="container"><nav class="breadcrumb"><a href="index.html">الرئيسية</a><span class="sep">/</span><a href="services.html">الخدمات</a><span class="sep">/</span><span>صالون الحلاقة</span></nav><div class="s-eyebrow reveal">التجميل الاحترافي</div><h1 class="s-title reveal" style="font-size:clamp(36px,5vw,64px)">صالون الحلاقة <em>والمنتجع</em></h1><p class="s-body reveal" style="margin-bottom:0">نحول كلبك لنجم فيلم بعد كل جلسة تجميل.</p></div></div>
+
+<section class="section"><div class="container">
+  <div class="salon-hero-split">
+    <div class="reveal-left">
+      <div class="s-eyebrow">لماذا صالوننا؟</div>
+      <h2 class="s-title">تجميل <em>يليق</em> بكلبك</h2>
+      <p style="font-size:15px;color:var(--mid);line-height:2;margin-bottom:20px">صالوننا مجهز بأحدث معدات التجميل العالمية، ويديره فريق من المتخصصين الحائزين على شهادات دولية في تجميل الحيوانات الأليفة.</p>
+      <p style="font-size:15px;color:var(--mid);line-height:2;margin-bottom:28px">نستخدم حصرياً منتجات عضوية خالية من المواد الكيميائية الضارة، آمنة تماماً لجلد وشعر كلبك.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <div style="background:rgba(0,229,255,.08);border:1px solid var(--border2);border-radius:8px;padding:10px 16px;font-size:12px;font-weight:600;color:var(--neon)">✓ منتجات عضوية 100%</div>
+        <div style="background:rgba(6,214,160,.08);border:1px solid rgba(6,214,160,.2);border-radius:8px;padding:10px 16px;font-size:12px;font-weight:600;color:var(--green)">✓ معدات معقمة</div>
+        <div style="background:rgba(255,107,53,.08);border:1px solid rgba(255,107,53,.2);border-radius:8px;padding:10px 16px;font-size:12px;font-weight:600;color:var(--warm)">✓ خبراء معتمدون</div>
+      </div>
+    </div>
+    <div class="salon-visual reveal-scale" style="background-image: url('https://tse4.mm.bing.net/th/id/OIP.yphmYDSgxzjFZx-KNmAQ5wHaEK?rs=1&pid=ImgDetMain&o=7&rm=3'); background-size: cover; background-position: center;">
+    </div>
+  </div>
+</div></section>
+
+<section class="section" style="padding-top:0"><div class="container">
+  <div class="s-eyebrow reveal">قائمة الخدمات</div>
+  <h2 class="s-title reveal">كل ما تحتاجه <em>لكلبك</em></h2>
+  <div class="grooming-menu">
+    <div class="gm-item reveal"><div class="gm-icon">✂️</div><div class="gm-name">قص الشعر الكامل</div><div class="gm-desc">تصفيف حسب معايير السلالة أو حسب رغبة المالك.</div><div class="gm-price">من HK$180</div></div>
+    <div class="gm-item reveal"><div class="gm-icon">🛁</div><div class="gm-name">الاستحمام والتنشيف</div><div class="gm-desc">شامبو عضوي وبلسم مرطب مع تنشيف احترافي.</div><div class="gm-price">من HK$120</div></div>
+    <div class="gm-item reveal"><div class="gm-icon">💅</div><div class="gm-name">تقليم الأظافر</div><div class="gm-desc">تقليم دقيق وصقل آمن مع مرهم مغذٍ.</div><div class="gm-price">HK$60</div></div>
+    <div class="gm-item reveal"><div class="gm-icon">👂</div><div class="gm-name">تنظيف الأذنين</div><div class="gm-desc">تنظيف آمن ومعقم يمنع التهابات الأذن.</div><div class="gm-price">HK$50</div></div>
+    <div class="gm-item reveal"><div class="gm-icon">🦷</div><div class="gm-name">تنظيف الأسنان</div><div class="gm-desc">إزالة التراكمات وتلميع الأسنان بمعجون آمن.</div><div class="gm-price">HK$80</div></div>
+    <div class="gm-item reveal"><div class="gm-icon">💆</div><div class="gm-name">مساج الاسترخاء</div><div class="gm-desc">مساج عضلي خفيف يريح كلبك ويقوي الدورة الدموية.</div><div class="gm-price">HK$100</div></div>
+    <div class="gm-item reveal"><div class="gm-icon">🧴</div><div class="gm-name">علاجات الشعر</div><div class="gm-desc">قناع مرطب ومقوي للشعر الجاف أو التالف.</div><div class="gm-price">من HK$90</div></div>
+    <div class="gm-item reveal"><div class="gm-icon">🌸</div><div class="gm-name">الباقة الكاملة</div><div class="gm-desc">جميع الخدمات مجتمعة بسعر مميز.</div><div class="gm-price">من HK$380</div></div>
+    <div class="gm-item reveal"><div class="gm-icon">⭐</div><div class="gm-name">جلسة نجم</div><div class="gm-desc">الباقة الكاملة + عطر فاخر + ربطة عنق أو بابيون.</div><div class="gm-price">من HK$480</div></div>
+  </div>
+  <div class="breeds-note reveal">
+    <div style="font-size:14px;font-weight:700;color:var(--neon);margin-bottom:8px">📋 ملاحظة حول الأسعار</div>
+    <p style="font-size:13px;color:var(--mid);line-height:1.8">الأسعار المذكورة تبدأ من للكلاب الصغيرة. قد تختلف الأسعار بناءً على حجم الكلب وطول الشعر وحالته. للحصول على سعر دقيق، تواصل معنا بوصف سلالة كلبك.</p>
+  </div>
+</div></section>
+
+<section class="section" style="padding-top:0"><div class="container">
+  <div style="background:linear-gradient(135deg,rgba(0,229,255,.08),rgba(255,107,53,.06));border:1px solid var(--border);border-radius:24px;padding:56px;text-align:center" class="reveal-scale">
+    <div style="font-size:56px;margin-bottom:16px">✂️</div>
+    <h2 class="s-title" style="margin-bottom:12px">اجعل كلبك <em>نجماً</em></h2>
+    <p class="s-body" style="text-align:center;margin:0 auto 32px">احجز جلسة تجميل الآن وستحصل على صور قبل وبعد كهدية!</p>
+    <a href="contact.html" class="btn btn-neon">احجز جلسة تجميل</a>
+  </div>
+</div></section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-logo">
+          <div class="nav-logo-icon">🐾</div>
+          <div class="nav-logo-text"><span class="nav-logo-en">Loving Homes</span><span class="nav-logo-ar">منتجع الكلاب الفاخر</span></div>
+        </div>
+        <p class="footer-brand-desc">منتجع فاخر للكلاب في قلب هونج كونج. نوفر بيئة آمنة ومريحة مليئة بالحب والرعاية لكلبك المحبوب.</p>
+        <div class="footer-social" role="list" aria-label="وسائل التواصل الاجتماعي">
+          <a href="#" role="listitem" aria-label="فيسبوك">📘</a>
+          <a href="#" role="listitem" aria-label="إنستغرام">📷</a>
+          <a href="#" role="listitem" aria-label="واتساب">💬</a>
+          <a href="#" role="listitem" aria-label="يوتيوب">▶️</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">الصفحات</div>
+        <ul class="footer-links" role="list">
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="about.html">من نحن</a></li>
+          <li><a href="video.html">الفيديو</a></li>
+          <li><a href="services.html">الخدمات</a></li>
+          <li><a href="packages.html">الحزم والأسعار</a></li>
+          <li><a href="gallery.html">المعرض</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">خدماتنا</div>
+        <ul class="footer-links" role="list">
+          <li><a href="grooming.html">صالون الحلاقة</a></li>
+          <li><a href="rooms.html">الغرف الفاخرة</a></li>
+          <li><a href="veterinary.html">الرعاية البيطرية</a></li>
+          <li><a href="outdoor.html">المرافق الخارجية</a></li>
+          <li><a href="testimonials.html">آراء العملاء</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">تواصل معنا</div>
+        <div class="footer-contact-item"><span class="fci-icon">📍</span><span class="fci-text">Tsim Sha Tsui، هونج كونج</span></div>
+        <div class="footer-contact-item"><span class="fci-icon">📞</span><span class="fci-text">+852 1234 5678</span></div>
+        <div class="footer-contact-item"><span class="fci-icon">✉️</span><span class="fci-text"><a href="mailto:info@lovinghomes.hk">info@lovinghomes.hk</a></span></div>
+        <div class="footer-contact-item"><span class="fci-icon">⏰</span><span class="fci-text">مفتوح 24/7 للطوارئ البيطرية</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Loving Homes Hong Kong. جميع الحقوق محفوظة.</span>
+      <div style="display:flex;gap:20px">
+        <a href="faq.html">الأسئلة الشائعة</a>
+        <a href="contact.html">تواصل معنا</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/app.js"></script>
+</body>
+</html>

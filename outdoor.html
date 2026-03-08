@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><meta name="description" content="المرافق الخارجية في Loving Homes — مراعي آمنة، غابات، وأنشطة ترفيهية"/><title>المرافق الخارجية — Loving Homes 🐾</title><link rel="stylesheet" href="../css/styles.css"/>
+<style>
+.outdoor-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.outdoor-card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:32px;cursor:pointer;transition:transform .35s var(--spring),border-color .25s,box-shadow .35s;position:relative;overflow:hidden}
+.outdoor-card.has-img{padding:0;display:flex;flex-direction:column}
+.oc-img{height:240px;background-size:cover;background-position:center}
+.oc-body{padding:32px}
+.outdoor-card::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(6,214,160,.07),transparent 60%);opacity:0;transition:opacity .3s}
+.outdoor-card:hover{transform:translateY(-6px);border-color:rgba(6,214,160,.3);box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 24px rgba(6,214,160,.2)}
+.outdoor-card:hover::before{opacity:1}
+.oc-emoji{font-size:56px;display:block;margin-bottom:16px;transition:transform .4s var(--spring)}
+.outdoor-card:hover .oc-emoji{transform:scale(1.15) rotate(6deg)}
+.oc-title{font-family:'Tajawal',sans-serif;font-size:22px;font-weight:800;color:var(--text);margin-bottom:8px}
+.oc-desc{font-size:13px;color:var(--mid);line-height:1.9;margin-bottom:14px}
+.oc-tag{display:inline-block;background:rgba(6,214,160,.1);border:1px solid rgba(6,214,160,.2);color:var(--green);font-size:11px;font-weight:600;padding:3px 10px;border-radius:100px;margin:2px}
+.activity-timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--border);border-radius:20px;overflow:hidden}
+.at-slot{padding:28px 20px;text-align:center;border-left:1px solid var(--border);transition:background .25s}
+.at-slot:last-child{border-left:none}
+.at-slot:hover{background:var(--bg3)}
+.at-time{font-size:11px;font-weight:700;color:var(--neon);letter-spacing:.1em;margin-bottom:10px}
+.at-icon{font-size:32px;margin-bottom:8px}
+.at-name{font-size:13px;font-weight:700;color:var(--text)}
+.at-sub{font-size:11px;color:var(--mid);margin-top:4px}
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">انتقل للمحتوى</a><div id="cursor"></div><div id="cursor-ring"></div><div id="scroll-bar"></div>
+<canvas id="particles-canvas" style="position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5"></canvas>
+<nav class="navbar"><a href="index.html" class="nav-logo"><div class="nav-logo-icon">🐾</div><div class="nav-logo-text"><span class="nav-logo-en">Loving Homes</span><span class="nav-logo-ar">منتجع الكلاب الفاخر</span></div></a><nav class="nav-links" aria-label="روابط التنقل">
+    <a href="index.html" class="nav-link">الرئيسية</a>
+    <a href="about.html" class="nav-link">من نحن</a>
+    <a href="video.html" class="nav-link">الفيديو</a>
+    <a href="services.html" class="nav-link">الخدمات</a>
+    <a href="packages.html" class="nav-link">الحزم</a>
+    <a href="rooms.html" class="nav-link">الغرف</a>
+    <a href="grooming.html" class="nav-link">الحلاقة</a>
+    <a href="outdoor.html" class="nav-link active">الخارجية</a>
+    <a href="veterinary.html" class="nav-link">البيطري</a>
+    <a href="gallery.html" class="nav-link">المعرض</a>
+    <a href="testimonials.html" class="nav-link">آراء العملاء</a>
+    <a href="faq.html" class="nav-link">الأسئلة</a>
+    <a href="contact.html" class="nav-link">تواصل</a>
+  </nav><a href="contact.html" class="nav-cta">احجز الآن ✦</a><button class="nav-hamburger" aria-label="القائمة"><span></span><span></span><span></span></button></nav>
+<div class="nav-mobile"><a href="index.html" class="nav-link">الرئيسية</a><a href="about.html" class="nav-link">من نحن</a><a href="video.html" class="nav-link">الفيديو</a><a href="services.html" class="nav-link">الخدمات</a><a href="packages.html" class="nav-link">الحزم</a><a href="rooms.html" class="nav-link">الغرف</a><a href="grooming.html" class="nav-link">الحلاقة</a><a href="outdoor.html" class="nav-link">الخارجية</a><a href="veterinary.html" class="nav-link">البيطري</a><a href="gallery.html" class="nav-link">المعرض</a><a href="testimonials.html" class="nav-link">آراء العملاء</a><a href="faq.html" class="nav-link">الأسئلة</a><a href="contact.html" class="nav-link">تواصل</a></div>
+<main id="main">
+<div class="page-hero"><div class="hk-grid"></div><div class="container"><nav class="breadcrumb"><a href="index.html">الرئيسية</a><span class="sep">/</span><span>المرافق الخارجية</span></nav><div class="s-eyebrow reveal">الطبيعة والحرية</div><h1 class="s-title reveal" style="font-size:clamp(36px,5vw,64px)">المرافق <em>الخارجية</em></h1><p class="s-body reveal" style="margin-bottom:0">مساحات خضراء آمنة وأنشطة طبيعية لإسعاد كلبك.</p></div></div>
+<section class="section"><div class="container">
+<div class="s-eyebrow reveal">مرافقنا</div><h2 class="s-title reveal">الطبيعة في <em>خدمة كلبك</em></h2>
+<div class="outdoor-grid">
+<div class="outdoor-card has-img reveal">
+  <div class="oc-img" style="background-image: url('https://thumbs.dreamstime.com/b/springtime-happy-dog-friends-friendly-dogs-having-big-smile-portrait-145158126.jpg')"></div>
+  <div class="oc-body">
+    <div class="oc-title">المراعي الخضراء</div>
+    <div class="oc-desc">مساحة عشب طبيعي واسعة ومسيّجة بالكامل. كلبك يركض ويلعب بحرية تامة في بيئة آمنة ومراقبة.</div>
+    <div><span class="oc-tag">عشب طبيعي</span><span class="oc-tag">مسيّجة بالكامل</span><span class="oc-tag">مراقبة دائمة</span></div>
+  </div>
+</div>
+<div class="outdoor-card has-img reveal">
+  <div class="oc-img" style="background-image: url('https://pic.i7lm.com/wp-content/uploads/2020/01/8-27.jpg')"></div>
+  <div class="oc-body">
+    <div class="oc-title">التمشية في الغابات</div>
+    <div class="oc-desc">مغامرات يومية في مسارات الطبيعة المحيطة بهونج كونج. مجموعات صغيرة مع مرشدين متخصصين.</div>
+    <div><span class="oc-tag">مسارات معتمدة</span><span class="oc-tag">3 كلاب/مرشد</span><span class="oc-tag">صور طبيعية</span></div>
+  </div>
+</div>
+<div class="outdoor-card has-img reveal">
+  <div class="oc-img" style="background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20220525/pngtree-at-the-seashore-a-pale-dog-and-a-tawny-dog-frolicking-together-photo-image_36760492.jpg')"></div>
+  <div class="oc-body">
+    <div class="oc-title">منطقة الرمل</div>
+    <div class="oc-desc">حفرة رمل مخصصة للحفر والاستكشاف — النشاط المفضل لمعظم الكلاب! رمل نظيف يجدد أسبوعياً.</div>
+    <div><span class="oc-tag">رمل طبيعي</span><span class="oc-tag">ألعاب الحفر</span><span class="oc-tag">مظلة واقية</span></div>
+  </div>
+</div>
+<div class="outdoor-card has-img reveal">
+  <div class="oc-img" style="background-image: url('https://ruffhdt.com/wp-content/uploads/2023/01/4-1.jpg')"></div>
+  <div class="oc-body">
+    <div class="oc-title">حظيرة اللعب الداخلية</div>
+    <div class="oc-desc">حظيرة واسعة مغلقة مليئة بالألعاب التفاعلية، مثالية للطقس الممطر أو الحار.</div>
+    <div><span class="oc-tag">مكيفة</span><span class="oc-tag">ألعاب متجددة</span><span class="oc-tag">لعب جماعي</span></div>
+  </div>
+</div>
+</div>
+</div></section>
+<section class="section" style="padding-top:0"><div class="container">
+<div class="s-eyebrow reveal">جدول يوم كلبك</div><h2 class="s-title reveal">يوم <em>مثالي</em> في Loving Homes</h2>
+<div class="activity-timeline reveal">
+<div class="at-slot"><div class="at-time">07:00</div><div class="at-icon">🌅</div><div class="at-name">الاستيقاظ والفطور</div><div class="at-sub">وجبة مخصصة</div></div>
+<div class="at-slot"><div class="at-time">09:00</div><div class="at-icon">🌿</div><div class="at-name">تمشية صباحية</div><div class="at-sub">في المراعي الخضراء</div></div>
+<div class="at-slot"><div class="at-time">11:00</div><div class="at-icon">🎾</div><div class="at-name">وقت اللعب</div><div class="at-sub">حظيرة اللعب</div></div>
+<div class="at-slot"><div class="at-time">13:00</div><div class="at-icon">😴</div><div class="at-name">قيلولة وغداء</div><div class="at-sub">راحة في الغرفة</div></div>
+</div>
+<div class="activity-timeline reveal" style="margin-top:2px;border-top:none;border-radius:0 0 20px 20px">
+<div class="at-slot"><div class="at-time">15:00</div><div class="at-icon">🌲</div><div class="at-name">جولة الغابة</div><div class="at-sub">مغامرة طبيعية</div></div>
+<div class="at-slot"><div class="at-time">17:00</div><div class="at-icon">⛱️</div><div class="at-name">الرمل والتشمس</div><div class="at-sub">لعب حر</div></div>
+<div class="at-slot"><div class="at-time">19:00</div><div class="at-icon">🍽️</div><div class="at-name">وجبة العشاء</div><div class="at-sub">حسب النظام الغذائي</div></div>
+<div class="at-slot"><div class="at-time">21:00</div><div class="at-icon">🌙</div><div class="at-name">وقت النوم</div><div class="at-sub">راحة ليلية هنيئة</div></div>
+</div>
+</div></section>
+</main>
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-logo">
+          <div class="nav-logo-icon">🐾</div>
+          <div class="nav-logo-text"><span class="nav-logo-en">Loving Homes</span><span class="nav-logo-ar">منتجع الكلاب الفاخر</span></div>
+        </div>
+        <p class="footer-brand-desc">منتجع فاخر للكلاب في قلب هونج كونج. نوفر بيئة آمنة ومريحة مليئة بالحب والرعاية لكلبك المحبوب.</p>
+        <div class="footer-social" role="list" aria-label="وسائل التواصل الاجتماعي">
+          <a href="#" role="listitem" aria-label="فيسبوك">📘</a>
+          <a href="#" role="listitem" aria-label="إنستغرام">📷</a>
+          <a href="#" role="listitem" aria-label="واتساب">💬</a>
+          <a href="#" role="listitem" aria-label="يوتيوب">▶️</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">الصفحات</div>
+        <ul class="footer-links" role="list">
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="about.html">من نحن</a></li>
+          <li><a href="video.html">الفيديو</a></li>
+          <li><a href="services.html">الخدمات</a></li>
+          <li><a href="packages.html">الحزم والأسعار</a></li>
+          <li><a href="gallery.html">المعرض</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">خدماتنا</div>
+        <ul class="footer-links" role="list">
+          <li><a href="grooming.html">صالون الحلاقة</a></li>
+          <li><a href="rooms.html">الغرف الفاخرة</a></li>
+          <li><a href="veterinary.html">الرعاية البيطرية</a></li>
+          <li><a href="outdoor.html">المرافق الخارجية</a></li>
+          <li><a href="testimonials.html">آراء العملاء</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">تواصل معنا</div>
+        <div class="footer-contact-item"><span class="fci-icon">📍</span><span class="fci-text">Tsim Sha Tsui، هونج كونج</span></div>
+        <div class="footer-contact-item"><span class="fci-icon">📞</span><span class="fci-text">+852 1234 5678</span></div>
+        <div class="footer-contact-item"><span class="fci-icon">✉️</span><span class="fci-text"><a href="mailto:info@lovinghomes.hk">info@lovinghomes.hk</a></span></div>
+        <div class="footer-contact-item"><span class="fci-icon">⏰</span><span class="fci-text">مفتوح 24/7 للطوارئ البيطرية</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Loving Homes Hong Kong. جميع الحقوق محفوظة.</span>
+      <div style="display:flex;gap:20px">
+        <a href="faq.html">الأسئلة الشائعة</a>
+        <a href="contact.html">تواصل معنا</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="description" content="تواصل مع Loving Homes — احجز لكلبك أو استفسر عن خدماتنا في هونج كونج"/>
+<title>تواصل معنا — Loving Homes 🐾</title>
+<link rel="stylesheet" href="../css/styles.css"/>
+<style>
+.contact-layout{display:grid;grid-template-columns:1fr 1.4fr;gap:48px;align-items:start}
+.contact-info{position:sticky;top:90px}
+.ci-card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:32px;margin-bottom:16px;transition:border-color .25s,transform .3s var(--spring)}
+.ci-card:hover{border-color:var(--border2);transform:translateX(-4px)}
+.ci-head{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.ci-icon{width:44px;height:44px;border-radius:10px;background:rgba(0,229,255,.08);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.ci-title{font-size:15px;font-weight:700;color:var(--text)}
+.ci-sub{font-size:12px;color:var(--mid);margin-top:2px}
+.ci-detail{font-size:14px;color:var(--mid);line-height:1.8}
+.ci-detail a{color:var(--neon);text-decoration:none}
+.ci-detail a:hover{text-decoration:underline}
+
+.map-placeholder{
+  background:var(--bg2);border:1px solid var(--border);border-radius:16px;
+  height:200px;display:flex;align-items:center;justify-content:center;
+  flex-direction:column;gap:10px;margin-top:16px;
+  font-size:13px;color:var(--mid);
+  position:relative;overflow:hidden;
+  cursor:none;transition:border-color .25s;
+}
+.map-placeholder:hover{border-color:var(--border2)}
+.map-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50%,rgba(0,229,255,.05),transparent 70%)}
+
+.booking-form-wrap{background:var(--surface);border:1px solid var(--border2);border-radius:24px;padding:40px;position:relative;overflow:hidden}
+.booking-form-wrap::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--neon),var(--warm))}
+
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-submit{
+  width:100%;padding:15px;
+  background:linear-gradient(135deg,var(--neon),var(--neon2));
+  color:var(--bg);font-family:'Cairo',sans-serif;
+  font-size:15px;font-weight:700;border:none;border-radius:12px;
+  cursor:none;transition:transform .3s var(--spring),box-shadow .3s,filter .2s;
+  box-shadow:var(--glow);
+}
+.form-submit:hover{transform:translateY(-3px) scale(1.01);box-shadow:0 0 40px rgba(0,229,255,.5);filter:brightness(1.1)}
+
+.tabs-wrapper-form{margin-bottom:28px}
+.whatsapp-btn{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  width:100%;padding:14px;border-radius:12px;
+  background:#25d366;color:#fff;
+  font-family:'Cairo',sans-serif;font-size:14px;font-weight:700;
+  text-decoration:none;cursor:none;
+  transition:transform .3s var(--spring),box-shadow .3s;
+  box-shadow:0 4px 20px rgba(37,211,102,.3);
+  margin-bottom:12px;
+}
+.whatsapp-btn:hover{transform:translateY(-3px);box-shadow:0 10px 36px rgba(37,211,102,.45)}
+
+.open-hours{
+  background:var(--bg2);border:1px solid var(--border);
+  border-radius:16px;padding:24px;margin-bottom:16px;
+}
+.oh-title{font-size:13px;font-weight:700;color:var(--text);margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.oh-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px}
+.oh-row:last-child{border-bottom:none}
+.oh-day{color:var(--mid)}
+.oh-time{color:var(--text);font-weight:600}
+.oh-badge{background:rgba(6,214,160,.12);color:var(--green);font-size:10px;font-weight:700;padding:2px 8px;border-radius:100px}
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">انتقل للمحتوى</a>
+<div id="cursor"></div><div id="cursor-ring"></div><div id="scroll-bar"></div>
+<canvas id="particles-canvas" style="position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5"></canvas>
+
+<nav class="navbar">
+  <a href="index.html" class="nav-logo"><div class="nav-logo-icon">🐾</div><div class="nav-logo-text"><span class="nav-logo-en">Loving Homes</span><span class="nav-logo-ar">منتجع الكلاب الفاخر</span></div></a>
+  <nav class="nav-links" aria-label="روابط التنقل">
+    <a href="index.html" class="nav-link">الرئيسية</a>
+    <a href="about.html" class="nav-link">من نحن</a>
+    <a href="video.html" class="nav-link">الفيديو</a>
+    <a href="services.html" class="nav-link">الخدمات</a>
+    <a href="packages.html" class="nav-link">الحزم</a>
+    <a href="rooms.html" class="nav-link">الغرف</a>
+    <a href="grooming.html" class="nav-link">الحلاقة</a>
+    <a href="outdoor.html" class="nav-link">الخارجية</a>
+    <a href="veterinary.html" class="nav-link">البيطري</a>
+    <a href="gallery.html" class="nav-link">المعرض</a>
+    <a href="testimonials.html" class="nav-link">آراء العملاء</a>
+    <a href="faq.html" class="nav-link">الأسئلة</a>
+    <a href="contact.html" class="nav-link active">تواصل</a>
+  </nav>
+  <a href="#booking-form" class="nav-cta">احجز الآن ✦</a>
+  <button class="nav-hamburger" aria-label="القائمة"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile">
+  <a href="index.html" class="nav-link">الرئيسية</a><a href="about.html" class="nav-link">من نحن</a>
+  <a href="video.html" class="nav-link">الفيديو</a>
+  <a href="services.html" class="nav-link">الخدمات</a><a href="packages.html" class="nav-link">الحزم</a>
+  <a href="rooms.html" class="nav-link">الغرف</a><a href="grooming.html" class="nav-link">الحلاقة</a>
+  <a href="outdoor.html" class="nav-link">الخارجية</a><a href="veterinary.html" class="nav-link">البيطري</a>
+  <a href="gallery.html" class="nav-link">المعرض</a><a href="testimonials.html" class="nav-link">آراء العملاء</a>
+  <a href="faq.html" class="nav-link">الأسئلة</a><a href="contact.html" class="nav-link">تواصل</a>
+</div>
+
+<main id="main">
+<div class="page-hero">
+  <div class="hk-grid"></div>
+  <div class="container">
+    <nav class="breadcrumb"><a href="index.html">الرئيسية</a><span class="sep">/</span><span>تواصل معنا</span></nav>
+    <div class="s-eyebrow reveal">نحن هنا لك</div>
+    <h1 class="s-title reveal" style="font-size:clamp(36px,5vw,64px)">تواصل <em>معنا</em></h1>
+    <p class="s-body reveal" style="margin-bottom:0">احجز لكلبك أو استفسر عن أي شيء — فريقنا يرد خلال ساعة.</p>
+  </div>
+</div>
+
+<section class="section"><div class="container">
+  <div class="contact-layout">
+
+    <!-- Left: Info -->
+    <div class="contact-info">
+
+      <!-- Hours -->
+      <div class="open-hours reveal-left">
+        <div class="oh-title">⏰ أوقات العمل</div>
+        <div class="oh-row"><span class="oh-day">الإثنين — الجمعة</span><span class="oh-time">8:00 — 20:00</span></div>
+        <div class="oh-row"><span class="oh-day">السبت — الأحد</span><span class="oh-time">9:00 — 18:00</span></div>
+        <div class="oh-row"><span class="oh-day">الطوارئ البيطرية</span><span class="oh-time"><span class="oh-badge">24 / 7</span></span></div>
+      </div>
+
+      <!-- Contact Cards -->
+      <div class="ci-card reveal-left">
+        <div class="ci-head">
+          <div class="ci-icon">📞</div>
+          <div><div class="ci-title">الهاتف</div><div class="ci-sub">نرد فوراً خلال ساعات العمل</div></div>
+        </div>
+        <div class="ci-detail"><a href="tel:+85212345678">+852 1234 5678</a><br><a href="tel:+85298765432">+852 9876 5432 (طوارئ)</a></div>
+      </div>
+
+      <div class="ci-card reveal-left">
+        <div class="ci-head">
+          <div class="ci-icon" style="background:rgba(37,211,102,.08);border-color:rgba(37,211,102,.2)">💬</div>
+          <div><div class="ci-title">واتساب</div><div class="ci-sub">الأسرع للرد اللحظي</div></div>
+        </div>
+        <div class="ci-detail"><a href="https://wa.me/85212345678">wa.me/85212345678</a><br><span style="font-size:12px">يُرجى إرسال اسم كلبك وسلالته</span></div>
+      </div>
+
+      <div class="ci-card reveal-left">
+        <div class="ci-head">
+          <div class="ci-icon" style="background:rgba(255,107,53,.08);border-color:rgba(255,107,53,.2)">✉️</div>
+          <div><div class="ci-title">البريد الإلكتروني</div><div class="ci-sub">رد خلال ساعتين</div></div>
+        </div>
+        <div class="ci-detail"><a href="/cdn-cgi/l/email-protection#d5bdb0b9b9ba95b9baa3bcbbb2bdbab8b0a6fbbdbe"><span class="__cf_email__" data-cfemail="d2bab7bebebd92bebda4bbbcb5babdbfb7a1fcbab9">[email&#160;protected]</span></a><br><a href="/cdn-cgi/l/email-protection#d1a7b4a591bdbea7b8bfb6b9bebcb4a2ffb9ba"><span class="__cf_email__" data-cfemail="4d3b28390d21223b24232a252220283e632526">[email&#160;protected]</span> (طبي)</a></div>
+      </div>
+
+      <div class="ci-card reveal-left">
+        <div class="ci-head">
+          <div class="ci-icon" style="background:rgba(255,209,102,.08);border-color:rgba(255,209,102,.2)">📍</div>
+          <div><div class="ci-title">العنوان</div><div class="ci-sub">Tsim Sha Tsui، هونج كونج</div></div>
+        </div>
+        <div class="ci-detail">38 Canton Road, Tsim Sha Tsui<br>Kowloon, Hong Kong<br><span style="font-size:12px;color:var(--low)">مواقف سيارات متاحة بالقرب</span></div>
+      </div>
+
+      <!-- Map Placeholder -->
+      <div class="map-placeholder reveal-left">
+        <div style="font-size:40px">🗺️</div>
+        <div style="font-weight:700;color:var(--text)">Tsim Sha Tsui · Kowloon</div>
+        <div>38 Canton Road, Hong Kong</div>
+        <div style="font-size:11px;color:var(--low);margin-top:4px">اضغط لفتح في خرائط Google</div>
+      </div>
+
+    </div>
+
+    <!-- Right: Form -->
+    <div id="booking-form">
+      <div class="booking-form-wrap reveal-scale">
+        <div style="margin-bottom:28px">
+          <div class="s-eyebrow" style="margin-bottom:10px">الحجز والاستفسار</div>
+          <h2 style="font-family:'Tajawal',sans-serif;font-size:26px;font-weight:800;color:var(--text)">أرسل طلبك <span style="color:var(--neon)">الآن</span></h2>
+        </div>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/85212345678" class="whatsapp-btn" target="_blank" rel="noopener">
+          💬 تواصل مباشرة عبر واتساب
+        </a>
+
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px">
+          <div style="flex:1;height:1px;background:var(--border)"></div>
+          <span style="font-size:12px;color:var(--low)">أو أرسل النموذج</span>
+          <div style="flex:1;height:1px;background:var(--border)"></div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs-wrapper-form tabs-wrapper">
+          <div class="tabs-nav">
+            <button class="tab-btn active" data-tab="booking">حجز إقامة 🐾</button>
+            <button class="tab-btn" data-tab="inquiry">استفسار عام 💬</button>
+            <button class="tab-btn" data-tab="grooming">حجز حلاقة ✂️</button>
+          </div>
+
+          <!-- Booking Tab -->
+          <div class="tab-panel active" data-panel="booking">
+            <form class="contact-form booking-form" novalidate aria-label="نموذج حجز الإقامة">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="ownerName">اسمك *</label>
+                  <input id="ownerName" type="text" class="form-input" placeholder="الاسم الكامل" required/>
+                  <div class="form-error">هذا الحقل مطلوب</div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="phone">رقم الهاتف *</label>
+                  <input id="phone" type="tel" class="form-input" placeholder="+852 XXXX XXXX" required/>
+                  <div class="form-error">هذا الحقل مطلوب</div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="dogName">اسم كلبك *</label>
+                  <input id="dogName" type="text" class="form-input" placeholder="مثال: ماكس" required/>
+                  <div class="form-error">هذا الحقل مطلوب</div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="breed">السلالة *</label>
+                  <input id="breed" type="text" class="form-input" placeholder="مثال: Golden Retriever" required/>
+                  <div class="form-error">هذا الحقل مطلوب</div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="checkin">تاريخ الاستلام *</label>
+                  <input id="checkin" type="date" class="form-input" required/>
+                  <div class="form-error">هذا الحقل مطلوب</div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="checkout">تاريخ الإعادة *</label>
+                  <input id="checkout" type="date" class="form-input" required/>
+                  <div class="form-error">هذا الحقل مطلوب</div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="package">الحزمة المطلوبة *</label>
+                <select id="package" class="form-select" required>
+                  <option value="">-- اختر الحزمة --</option>
+                  <option>حزمة اليوم — HK$280/يوم</option>
+                  <option>حزمة كلاسيك — HK$480/يوم</option>
+                  <option>حزمة بريميوم — HK$780/يوم</option>
+                  <option>حزمة مخصصة — تواصل للتفاصيل</option>
+                </select>
+                <div class="form-error">يرجى اختيار الحزمة</div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="notes">ملاحظات خاصة</label>
+                <textarea id="notes" class="form-textarea" placeholder="أي تعليمات خاصة عن تغذية كلبك، دوائه، طباعه، أو أي شيء مهم تريد إخبارنا به..."></textarea>
+              </div>
+              <div class="form-group">
+                <label style="display:flex;align-items:flex-start;gap:10px;cursor:none;font-size:13px;color:var(--mid)">
+                  <input type="checkbox" required style="margin-top:2px;width:16px;height:16px;flex-shrink:0;cursor:none;accent-color:var(--neon)"/>
+                  <span>أوافق على <a href="faq.html" style="color:var(--neon)">شروط الخدمة وسياسة الإلغاء</a> وأؤكد أن كلبي محصّن ضد الأمراض المعدية *</span>
+                </label>
+              </div>
+              <button type="submit" class="form-submit">تأكيد الحجز ✦</button>
+            </form>
+          </div>
+
+          <!-- Inquiry Tab -->
+          <div class="tab-panel" data-panel="inquiry">
+            <form class="contact-form" novalidate aria-label="نموذج الاستفسار">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="iName">اسمك *</label>
+                  <input id="iName" type="text" class="form-input" placeholder="الاسم الكامل" required/>
+                  <div class="form-error">هذا الحقل مطلوب</div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="iEmail">البريد الإلكتروني *</label>
+                  <input id="iEmail" type="email" class="form-input" placeholder="email@example.com" required/>
+                  <div class="form-error">هذا الحقل مطلوب</div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="iSubject">الموضوع *</label>
+                <select id="iSubject" class="form-select" required>
+                  <option value="">-- اختر الموضوع --</option>
+                  <option>استفسار عن الأسعار</option>
+                  <option>استفسار عن الخدمات</option>
+                  <option>حجز مخصص</option>
+                  <option>شكوى أو اقتراح</option>
+                  <option>أخرى</option>
+                </select>
+                <div class="form-error">يرجى اختيار موضوع</div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="iMessage">رسالتك *</label>
+                <textarea id="iMessage" class="form-textarea" placeholder="اكتب استفسارك هنا..." required></textarea>
+                <div class="form-error">هذا الحقل مطلوب</div>
+              </div>
+              <button type="submit" class="form-submit">إرسال الاستفسار</button>
+            </form>
+          </div>
+
+          <!-- Grooming Tab -->
+          <div class="tab-panel" data-panel="grooming">
+            <form class="contact-form" novalidate aria-label="نموذج حجز الحلاقة">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="gName">اسمك *</label>
+                  <input id="gName" type="text" class="form-input" placeholder="الاسم الكامل" required/>
+                  <div class="form-error">هذا الحقل مطلوب</div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="gPhone">رقم الهاتف *</label>
+                  <input id="gPhone" type="tel" class="form-input" placeholder="+852 XXXX XXXX" required/>
+                  <div class="form-error">هذا الحقل مطلوب</div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="gDog">اسم كلبك وسلالته *</label>
+                  <input id="gDog" type="text" class="form-input" placeholder="مثال: كوكو — Shih Tzu" required/>
+                  <div class="form-error">هذا الحقل مطلوب</div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="gDate">التاريخ المفضل *</label>
+                  <input id="gDate" type="date" class="form-input" required/>
+                  <div class="form-error">هذا الحقل مطلوب</div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="gService">الخدمة المطلوبة *</label>
+                <select id="gService" class="form-select" required>
+                  <option value="">-- اختر الخدمة --</option>
+                  <option>قص الشعر — من HK$180</option>
+                  <option>استحمام وتنشيف — من HK$120</option>
+                  <option>الباقة الكاملة — من HK$380</option>
+                  <option>جلسة نجم — من HK$480</option>
+                  <option>تقليم أظافر فقط — HK$60</option>
+                </select>
+                <div class="form-error">يرجى اختيار الخدمة</div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="gNotes">ملاحظات الحلاقة</label>
+                <textarea id="gNotes" class="form-textarea" style="min-height:90px" placeholder="هل لديك تعليمات خاصة بشأن قصة الشعر أو أي حساسيات يجب معرفتها؟"></textarea>
+              </div>
+              <button type="submit" class="form-submit">احجز جلسة الحلاقة ✂️</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div></section>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-logo">
+          <div class="nav-logo-icon">🐾</div>
+          <div class="nav-logo-text"><span class="nav-logo-en">Loving Homes</span><span class="nav-logo-ar">منتجع الكلاب الفاخر</span></div>
+        </div>
+        <p class="footer-brand-desc">منتجع فاخر للكلاب في قلب هونج كونج. نوفر بيئة آمنة ومريحة مليئة بالحب والرعاية لكلبك المحبوب.</p>
+        <div class="footer-social" role="list" aria-label="وسائل التواصل الاجتماعي">
+          <a href="#" role="listitem" aria-label="فيسبوك">📘</a>
+          <a href="#" role="listitem" aria-label="إنستغرام">📷</a>
+          <a href="#" role="listitem" aria-label="واتساب">💬</a>
+          <a href="#" role="listitem" aria-label="يوتيوب">▶️</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">الصفحات</div>
+        <ul class="footer-links" role="list">
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="about.html">من نحن</a></li>
+          <li><a href="video.html">الفيديو</a></li>
+          <li><a href="services.html">الخدمات</a></li>
+          <li><a href="packages.html">الحزم والأسعار</a></li>
+          <li><a href="gallery.html">المعرض</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">خدماتنا</div>
+        <ul class="footer-links" role="list">
+          <li><a href="grooming.html">صالون الحلاقة</a></li>
+          <li><a href="rooms.html">الغرف الفاخرة</a></li>
+          <li><a href="veterinary.html">الرعاية البيطرية</a></li>
+          <li><a href="outdoor.html">المرافق الخارجية</a></li>
+          <li><a href="testimonials.html">آراء العملاء</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">تواصل معنا</div>
+        <div class="footer-contact-item"><span class="fci-icon">📍</span><span class="fci-text">Tsim Sha Tsui، هونج كونج</span></div>
+        <div class="footer-contact-item"><span class="fci-icon">📞</span><span class="fci-text">+852 1234 5678</span></div>
+        <div class="footer-contact-item"><span class="fci-icon">✉️</span><span class="fci-text"><a href="mailto:info@lovinghomes.hk">info@lovinghomes.hk</a></span></div>
+        <div class="footer-contact-item"><span class="fci-icon">⏰</span><span class="fci-text">مفتوح 24/7 للطوارئ البيطرية</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Loving Homes Hong Kong. جميع الحقوق محفوظة.</span>
+      <div style="display:flex;gap:20px">
+        <a href="faq.html">الأسئلة الشائعة</a>
+        <a href="contact.html">تواصل معنا</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/app.js"></script>
+</body>
+</html>

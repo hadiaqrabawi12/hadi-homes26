@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="description" content="الأسئلة الشائعة حول خدمات Loving Homes — كل ما تحتاج معرفته"/>
+<title>الأسئلة الشائعة — Loving Homes 🐾</title>
+<link rel="stylesheet" href="../css/styles.css"/>
+<style>
+.faq-layout{display:grid;grid-template-columns:280px 1fr;gap:48px;align-items:start}
+.faq-sidebar{position:sticky;top:90px}
+.faq-cat-btn{
+  display:flex;align-items:center;gap:12px;
+  width:100%;background:none;border:1px solid var(--border);
+  border-radius:10px;padding:12px 16px;margin-bottom:8px;
+  font-family:'Cairo',sans-serif;font-size:13px;font-weight:600;
+  color:var(--mid);cursor:none;text-align:right;
+  transition:all .22s var(--ease);
+}
+.faq-cat-btn:hover{border-color:var(--border2);color:var(--text);background:var(--bg2)}
+.faq-cat-btn.active{border-color:var(--neon);color:var(--neon);background:rgba(0,229,255,.07)}
+.faq-cat-icon{font-size:18px}
+.faq-group{margin-bottom:40px}
+.faq-group-title{
+  font-family:'Tajawal',sans-serif;font-size:20px;font-weight:800;
+  color:var(--text);margin-bottom:20px;padding-bottom:14px;
+  border-bottom:1px solid var(--border);
+  display:flex;align-items:center;gap:10px;
+}
+.faq-search{
+  background:var(--bg2);border:1.5px solid var(--border);
+  border-radius:12px;padding:12px 18px;
+  font-family:'Cairo',sans-serif;font-size:14px;color:var(--text);
+  outline:none;width:100%;margin-bottom:32px;direction:rtl;
+  transition:border-color .25s,box-shadow .25s;
+}
+.faq-search:focus{border-color:var(--neon);box-shadow:0 0 0 3px rgba(0,229,255,.12)}
+.faq-search::placeholder{color:var(--low)}
+.faq-not-found{display:none;text-align:center;padding:40px;color:var(--mid);font-size:15px}
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">انتقل للمحتوى</a>
+<div id="cursor"></div><div id="cursor-ring"></div><div id="scroll-bar"></div>
+
+<nav class="navbar">
+  <a href="index.html" class="nav-logo"><div class="nav-logo-icon">🐾</div><div class="nav-logo-text"><span class="nav-logo-en">Loving Homes</span><span class="nav-logo-ar">منتجع الكلاب الفاخر</span></div></a>
+  <nav class="nav-links" aria-label="روابط التنقل">
+    <a href="index.html" class="nav-link">الرئيسية</a>
+    <a href="about.html" class="nav-link">من نحن</a>
+    <a href="video.html" class="nav-link">الفيديو</a>
+    <a href="services.html" class="nav-link">الخدمات</a>
+    <a href="packages.html" class="nav-link">الحزم</a>
+    <a href="rooms.html" class="nav-link">الغرف</a>
+    <a href="grooming.html" class="nav-link">الحلاقة</a>
+    <a href="outdoor.html" class="nav-link">الخارجية</a>
+    <a href="veterinary.html" class="nav-link">البيطري</a>
+    <a href="gallery.html" class="nav-link">المعرض</a>
+    <a href="testimonials.html" class="nav-link">آراء العملاء</a>
+    <a href="faq.html" class="nav-link">الأسئلة</a>
+    <a href="contact.html" class="nav-link">تواصل</a>
+  </nav>
+  <a href="contact.html" class="nav-cta">احجز الآن ✦</a>
+  <button class="nav-hamburger" aria-label="القائمة"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile">
+  <a href="index.html" class="nav-link">الرئيسية</a><a href="about.html" class="nav-link">من نحن</a>
+  <a href="video.html" class="nav-link">الفيديو</a>
+  <a href="services.html" class="nav-link">الخدمات</a><a href="packages.html" class="nav-link">الحزم</a>
+  <a href="rooms.html" class="nav-link">الغرف</a><a href="grooming.html" class="nav-link">الحلاقة</a>
+  <a href="outdoor.html" class="nav-link">الخارجية</a><a href="veterinary.html" class="nav-link">البيطري</a>
+  <a href="gallery.html" class="nav-link">المعرض</a><a href="testimonials.html" class="nav-link">آراء العملاء</a>
+  <a href="faq.html" class="nav-link">الأسئلة</a><a href="contact.html" class="nav-link">تواصل</a>
+</div>
+
+<main id="main">
+<div class="page-hero">
+  <div class="hk-grid"></div>
+  <div class="container">
+    <nav class="breadcrumb"><a href="index.html">الرئيسية</a><span class="sep">/</span><span>الأسئلة الشائعة</span></nav>
+    <div class="s-eyebrow reveal">لديك سؤال؟</div>
+    <h1 class="s-title reveal" style="font-size:clamp(36px,5vw,64px)">الأسئلة <em>الشائعة</em></h1>
+    <p class="s-body reveal" style="margin-bottom:0">إجابات شاملة لكل ما يدور في ذهنك حول خدماتنا.</p>
+  </div>
+</div>
+
+<section class="section"><div class="container">
+
+  <input type="text" class="faq-search reveal" placeholder="🔍 ابحث عن سؤالك..." id="faqSearch" aria-label="البحث في الأسئلة"/>
+
+  <div class="faq-layout">
+
+    <!-- Sidebar Categories -->
+    <div class="faq-sidebar reveal-left">
+      <div style="font-size:12px;font-weight:700;color:var(--mid);letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px">التصنيفات</div>
+      <button class="faq-cat-btn active" data-cat="all"><span class="faq-cat-icon">📋</span>كل الأسئلة</button>
+      <button class="faq-cat-btn" data-cat="booking"><span class="faq-cat-icon">📅</span>الحجز والأسعار</button>
+      <button class="faq-cat-btn" data-cat="rooms"><span class="faq-cat-icon">🏠</span>الغرف والمرافق</button>
+      <button class="faq-cat-btn" data-cat="health"><span class="faq-cat-icon">🏥</span>الصحة والأمان</button>
+      <button class="faq-cat-btn" data-cat="services"><span class="faq-cat-icon">✂️</span>الخدمات</button>
+      <button class="faq-cat-btn" data-cat="delivery"><span class="faq-cat-icon">🚗</span>التوصيل</button>
+      <div style="margin-top:24px;padding:20px;background:rgba(0,229,255,.06);border:1px solid var(--border2);border-radius:12px">
+        <div style="font-size:13px;font-weight:700;color:var(--neon);margin-bottom:8px">لم تجد إجابتك؟</div>
+        <p style="font-size:12px;color:var(--mid);line-height:1.7;margin-bottom:12px">تواصل معنا مباشرة وسنرد خلال ساعة.</p>
+        <a href="contact.html" class="btn btn-neon" style="font-size:12px;padding:9px 18px">تواصل معنا</a>
+      </div>
+    </div>
+
+    <!-- FAQ Content -->
+    <div id="faqContent">
+
+      <!-- Booking -->
+      <div class="faq-group" data-cat="booking">
+        <div class="faq-group-title"><span>📅</span> الحجز والأسعار</div>
+        <div class="accordion-item reveal">
+          <button class="accordion-btn"><span>كيف أحجز لكلبي؟</span><div class="accordion-icon">+</div></button>
+          <div class="accordion-body"><p>يمكنك الحجز عبر ثلاث طرق: الاتصال المباشر على +852 1234 5678، أو إرسال بريد إلكتروني على <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c6aea3aaaaa986aaa9b0afa8a1aea9aba3b5e8aead">[email&#160;protected]</a>، أو ملء نموذج الاتصال في صفحة <a href="contact.html" style="color:var(--neon)">تواصل معنا</a>. يُنصح بالحجز قبل 48 ساعة على الأقل لضمان توفر الغرفة المناسبة.</p></div>
+        </div>
+        <div class="accordion-item reveal">
+          <button class="accordion-btn"><span>ما هي طرق الدفع المقبولة؟</span><div class="accordion-icon">+</div></button>
+          <div class="accordion-body"><p>نقبل جميع البطاقات الائتمانية الرئيسية (Visa, Mastercard, AMEX)، الدفع النقدي، PayMe، FPS، وBank Transfer. يُطلب دفع عربون 50% عند الحجز ويُسدد الباقي عند الاستلام.</p></div>
+        </div>
+        <div class="accordion-item reveal">
+          <button class="accordion-btn"><span>هل يمكن إلغاء الحجز أو تعديله؟</span><div class="accordion-icon">+</div></button>
+          <div class="accordion-body"><p>يمكن الإلغاء أو التعديل مجاناً قبل 24 ساعة من موعد الاستلام. في حالة الإلغاء خلال أقل من 24 ساعة، يُحتجز 25% من العربون كرسوم. للظروف الطارئة، نتعامل بمرونة وإنسانية — تواصل معنا مباشرة.</p></div>
+        </div>
+        <div class="accordion-item reveal">
+          <button class="accordion-btn"><span>هل توجد عروض للإقامات الطويلة؟</span><div class="accordion-icon">+</div></button>
+          <div class="accordion-body"><p>نعم! للإقامات التي تتجاوز أسبوعاً، نقدم خصم 10%. وللإقامات الشهرية، يصل الخصم إلى 20%. كما توجد حزم مخصصة للعملاء المنتظمين. تواصل معنا لمناقشة الخيار الأنسب.</p></div>
+        </div>
+      </div>
+
+      <!-- Rooms -->
+      <div class="faq-group" data-cat="rooms">
+        <div class="faq-group-title"><span>🏠</span> الغرف والمرافق</div>
+        <div class="accordion-item reveal">
+          <button class="accordion-btn"><span>كيف تعمل تدفئة الأرضية؟</span><div class="accordion-icon">+</div></button>
+          <div class="accordion-body"><p>نستخدم نظام تدفئة هيدروليكي تحت الأرضية يحافظ على درجة حرارة ثابتة ومريحة (حوالي 22-25 درجة مئوية). هذا النظام أكثر كفاءة وأكثر راحة للكلاب من التدفئة التقليدية لأنه يوزع الحرارة بشكل متساوٍ.</p></div>
+        </div>
+        <div class="accordion-item reveal">
+          <button class="accordion-btn"><span>ماذا يعرض التلفزيون في الغرف؟</span><div class="accordion-icon">+</div></button>
+          <div class="accordion-body"><p>يعرض التلفزيون محتوى مصمماً خصيصاً للكلاب — مشاهد طبيعية هادئة، أصوات طبيعة مريحة، ومقاطع مخصصة لتحفيز الكلاب وإبقائهم هادئين. الأبحاث تؤكد أن هذا المحتوى يقلل القلق ويساعد الكلاب على الاسترخاء.</p></div>
+        </div>
+        <div class="accordion-item reveal">
+          <button class="accordion-btn"><span>هل يمكنني إحضار أغراض كلبي معه؟</span><div class="accordion-icon">+</div></button>
+          <div class="accordion-body"><p>بالطبع! نشجع على إحضار لعبة كلبك المفضلة أو بطانيته التي تحمل رائحة المنزل — هذا يساعده على التكيف بسرعة. يمكنك أيضاً إحضار طعامه الخاص إذا كان على نظام غذائي معين.</p></div>
+        </div>
+      </div>
+
+      <!-- Health -->
+      <div class="faq-group" data-cat="health">
+        <div class="faq-group-title"><span>🏥</span> الصحة والأمان</div>
+        <div class="accordion-item reveal">
+          <button class="accordion-btn"><span>هل يحتاج كلبي لتطعيمات معينة؟</span><div class="accordion-icon">+</div></button>
+          <div class="accordion-body"><p>نعم، لحماية جميع الكلاب في المنتجع، نشترط أن يكون كلبك محصّناً ضد: Distemper، Parvovirus، Adenovirus، وLeptospirosis. كما يُفضل تلقيح ضد Kennel Cough. يُرجى إحضار سجل التطعيم عند الاستلام.</p></div>
+        </div>
+        <div class="accordion-item reveal">
+          <button class="accordion-btn"><span>ماذا يحدث في حالة مرض كلبي؟</span><div class="accordion-icon">+</div></button>
+          <div class="accordion-body"><p>فريقنا البيطري يراقب جميع الكلاب باستمرار. في حالة ظهور أي أعراض، يتم الفحص الفوري وإبلاغك على الفور قبل اتخاذ أي قرار علاجي — إلا في الحالات الطارئة التي تتطلب تدخلاً فورياً. جميع التكاليف البيطرية الطارئة تُحسب على حساب المالك.</p></div>
+        </div>
+        <div class="accordion-item reveal">
+          <button class="accordion-btn"><span>كيف تتعاملون مع الكلاب العدوانية؟</span><div class="accordion-icon">+</div></button>
+          <div class="accordion-body"><p>لدينا خبراء سلوك حيوانات متخصصون. الكلاب العدوانية تُعزل في غرف خاصة ويتم التعامل معها بشكل فردي. خلال التسجيل، نسألك عن طباع كلبك لنهيئ البيئة المناسبة له تماماً.</p></div>
+        </div>
+        <div class="accordion-item reveal">
+          <button class="accordion-btn"><span>هل المنشأة آمنة من الهروب؟</span><div class="accordion-icon">+</div></button>
+          <div class="accordion-body"><p>أولويتنا القصوى. منشأتنا مصممة بأسوار مزدوجة، أبواب ذكية مقفلة تلقائياً، وكاميرات مراقبة في كل زاوية. لم يتمكن أي كلب من الهروب منذ افتتاحنا عام 2020.</p></div>
+        </div>
+      </div>
+
+      <!-- Services -->
+      <div class="faq-group" data-cat="services">
+        <div class="faq-group-title"><span>✂️</span> الخدمات</div>
+        <div class="accordion-item reveal">
+          <button class="accordion-btn"><span>كم تستغرق جلسة الحلاقة؟</span><div class="accordion-icon">+</div></button>
+          <div class="accordion-body"><p>تتراوح مدة جلسة الحلاقة بين ساعة وساعتين حسب حجم الكلب وطول شعره وحالته. الباقة الكاملة قد تصل إلى 3 ساعات. يمكنك طلب تحديث عند اكتمال الجلسة.</p></div>
+        </div>
+        <div class="accordion-item reveal">
+          <button class="accordion-btn"><span>هل يمكنني طلب تغذية خاصة؟</span><div class="accordion-icon">+</div></button>
+          <div class="accordion-body"><p>بالتأكيد. نلتزم بأي نظام غذائي تحدده، سواء أحضرت طعامك الخاص أو طلبت وجبات من قائمتنا (خيارات خضار، بروتين معين، إلخ). أخبرنا عند الحجز وسنحضّر كل شيء.</p></div>
+        </div>
+        <div class="accordion-item reveal">
+          <button class="accordion-btn"><span>كم مرة سأتلقى صوراً لكلبي؟</span><div class="accordion-icon">+</div></button>
+          <div class="accordion-body"><p>في الحزمة الكلاسيكية، ترسل صورتان إلى ثلاث صور يومياً عبر واتساب أو البريد. في الحزمة المميزة، تصل إلى 5-8 صور يومياً مع تقرير مفصل عن يوم كلبك. الحزمة اليومية: تقرير ختامي وصورة عند المغادرة.</p></div>
+        </div>
+      </div>
+
+      <!-- Delivery -->
+      <div class="faq-group" data-cat="delivery">
+        <div class="faq-group-title"><span>🚗</span> خدمة التوصيل</div>
+        <div class="accordion-item reveal">
+          <button class="accordion-btn"><span>ما هي تغطية خدمة التوصيل؟</span><div class="accordion-icon">+</div></button>
+          <div class="accordion-body"><p>نغطي جميع مناطق هونج كونج — الجزيرة، كولون، النواحي الجديدة، ولانتاو. يُرجى إخبارنا بعنوانك عند الحجز وسنؤكد التوافر وسعر التوصيل حسب المنطقة.</p></div>
+        </div>
+        <div class="accordion-item reveal">
+          <button class="accordion-btn"><span>كيف أعرف أن سيارة التوصيل آمنة؟</span><div class="accordion-icon">+</div></button>
+          <div class="accordion-body"><p>سياراتنا مجهزة بأقفاص تهوية آمنة ومكيفة، وكاميرا داخلية، ونظام تتبع GPS مباشر. سائقونا مدربون على الإسعافات الأولية للحيوانات. ستحصل على رابط تتبع حي فور انطلاق السيارة.</p></div>
+        </div>
+        <div class="accordion-item reveal">
+          <button class="accordion-btn"><span>هل التوصيل مجاني؟</span><div class="accordion-icon">+</div></button>
+          <div class="accordion-body"><p>خدمة التوصيل مدفوعة وتختلف حسب المسافة. في المناطق المجاورة لمنشأتنا (3 كم)، يكون السعر HK$80 ذهاباً وإياباً. في المناطق البعيدة، يصل إلى HK$250. تواصل معنا للحصول على سعر دقيق لمنطقتك.</p></div>
+        </div>
+      </div>
+
+      <div class="faq-not-found" id="noResults">
+        <div style="font-size:48px;margin-bottom:16px">🔍</div>
+        <div>لم نجد نتائج لبحثك — جرّب كلمات أخرى أو <a href="contact.html" style="color:var(--neon)">تواصل معنا</a></div>
+      </div>
+
+    </div>
+  </div>
+
+</div></section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><div class="footer-brand-logo"><div class="nav-logo-icon">🐾</div><div class="nav-logo-text"><span class="nav-logo-en">Loving Homes</span><span class="nav-logo-ar">منتجع الكلاب الفاخر</span></div></div><p class="footer-brand-desc">منتجع فاخر للكلاب في قلب هونج كونج.</p><div class="footer-social"><a href="#" aria-label="فيسبوك">📘</a><a href="#" aria-label="إنستغرام">📷</a><a href="#" aria-label="واتساب">💬</a></div></div>
+      <div><div class="footer-col-title">الصفحات</div><ul class="footer-links"><li><a href="index.html">الرئيسية</a></li><li><a href="about.html">من نحن</a></li><li><a href="services.html">الخدمات</a></li><li><a href="packages.html">الحزم</a></li></ul></div>
+      <div><div class="footer-col-title">خدماتنا</div><ul class="footer-links"><li><a href="grooming.html">الحلاقة</a></li><li><a href="rooms.html">الغرف</a></li><li><a href="veterinary.html">البيطري</a></li><li><a href="outdoor.html">الخارجية</a></li></ul></div>
+      <div><div class="footer-col-title">تواصل</div><div class="footer-contact-item"><span class="fci-icon">📞</span><span class="fci-text">+852 1234 5678</span></div><div class="footer-contact-item"><span class="fci-icon">✉️</span><span class="fci-text"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ec8489808083ac80839a85828b848381899fc28487">[email&#160;protected]</a></span></div></div>
+    </div>
+    <div class="footer-bottom"><span>© 2025 Loving Homes Hong Kong.</span><a href="faq.html">الأسئلة الشائعة</a></div>
+  </div>
+</footer>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="../js/app.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Category filter
+  const catBtns = document.querySelectorAll('.faq-cat-btn');
+  const groups  = document.querySelectorAll('.faq-group');
+  catBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      catBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const cat = btn.dataset.cat;
+      groups.forEach(g => {
+        g.style.display = (cat === 'all' || g.dataset.cat === cat) ? '' : 'none';
+      });
+    });
+  });
+
+  // Search
+  const search = document.getElementById('faqSearch');
+  const noRes  = document.getElementById('noResults');
+  if (search) {
+    search.addEventListener('input', () => {
+      const q = search.value.trim().toLowerCase();
+      let found = 0;
+      document.querySelectorAll('.accordion-item').forEach(item => {
+        const text = item.textContent.toLowerCase();
+        const match = !q || text.includes(q);
+        item.style.display = match ? '' : 'none';
+        if (match) found++;
+      });
+      groups.forEach(g => {
+        const hasVisible = g.querySelectorAll('.accordion-item:not([style*="display: none"])').length > 0;
+        g.style.display = hasVisible ? '' : 'none';
+      });
+      if (noRes) noRes.style.display = found > 0 ? 'none' : 'block';
+    });
+  }
+});
+</script>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-logo">
+          <div class="nav-logo-icon">🐾</div>
+          <div class="nav-logo-text"><span class="nav-logo-en">Loving Homes</span><span class="nav-logo-ar">منتجع الكلاب الفاخر</span></div>
+        </div>
+        <p class="footer-brand-desc">منتجع فاخر للكلاب في قلب هونج كونج. نوفر بيئة آمنة ومريحة مليئة بالحب والرعاية لكلبك المحبوب.</p>
+        <div class="footer-social" role="list" aria-label="وسائل التواصل الاجتماعي">
+          <a href="#" role="listitem" aria-label="فيسبوك">📘</a>
+          <a href="#" role="listitem" aria-label="إنستغرام">📷</a>
+          <a href="#" role="listitem" aria-label="واتساب">💬</a>
+          <a href="#" role="listitem" aria-label="يوتيوب">▶️</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">الصفحات</div>
+        <ul class="footer-links" role="list">
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="about.html">من نحن</a></li>
+          <li><a href="video.html">الفيديو</a></li>
+          <li><a href="services.html">الخدمات</a></li>
+          <li><a href="packages.html">الحزم والأسعار</a></li>
+          <li><a href="gallery.html">المعرض</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">خدماتنا</div>
+        <ul class="footer-links" role="list">
+          <li><a href="grooming.html">صالون الحلاقة</a></li>
+          <li><a href="rooms.html">الغرف الفاخرة</a></li>
+          <li><a href="veterinary.html">الرعاية البيطرية</a></li>
+          <li><a href="outdoor.html">المرافق الخارجية</a></li>
+          <li><a href="testimonials.html">آراء العملاء</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">تواصل معنا</div>
+        <div class="footer-contact-item"><span class="fci-icon">📍</span><span class="fci-text">Tsim Sha Tsui، هونج كونج</span></div>
+        <div class="footer-contact-item"><span class="fci-icon">📞</span><span class="fci-text">+852 1234 5678</span></div>
+        <div class="footer-contact-item"><span class="fci-icon">✉️</span><span class="fci-text"><a href="mailto:info@lovinghomes.hk">info@lovinghomes.hk</a></span></div>
+        <div class="footer-contact-item"><span class="fci-icon">⏰</span><span class="fci-text">مفتوح 24/7 للطوارئ البيطرية</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Loving Homes Hong Kong. جميع الحقوق محفوظة.</span>
+      <div style="display:flex;gap:20px">
+        <a href="faq.html">الأسئلة الشائعة</a>
+        <a href="contact.html">تواصل معنا</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html> 

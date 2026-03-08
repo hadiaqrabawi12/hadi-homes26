@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="description" content="شاهد فيديوهات Loving Homes - جولة داخل منتجع الكلاب الفاخر في هونج كونج"/>
+<title>فيديوهاتنا — Loving Homes 🐾</title>
+<link rel="stylesheet" href="../css/styles.css"/>
+<style>
+.video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+.video-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;transition:transform .3s var(--spring),border-color .25s,box-shadow .3s;display:flex;flex-direction:column}
+.video-card:hover{transform:translateY(-8px);border-color:var(--border2);box-shadow:0 20px 50px rgba(0,0,0,.5),var(--glow)}
+.video-wrapper{position:relative;padding-bottom:56.25%;height:0;background:var(--bg2)}
+.video-wrapper iframe, .video-wrapper video{position:absolute;top:0;left:0;width:100%;height:100%;border:0;object-fit:cover;background:#000}
+video::-webkit-media-controls-panel { background-image: none !important; filter: brightness(0.9); }
+.video-card { background: var(--bg2); }
+.video-info{padding:20px;flex-grow:1}
+.video-title{font-size:16px;font-weight:700;color:var(--text);margin-bottom:8px}
+.video-desc{font-size:13px;color:var(--mid);line-height:1.6}
+
+@media(max-width:1024px){
+  .video-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){
+  .video-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">انتقل إلى المحتوى</a>
+<div id="cursor"></div><div id="cursor-ring"></div><div id="scroll-bar"></div>
+<canvas id="particles-canvas" style="position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5"></canvas>
+
+<nav class="navbar"><a href="index.html" class="nav-logo"><div class="nav-logo-icon">🐾</div><div class="nav-logo-text"><span class="nav-logo-en">Loving Homes</span><span class="nav-logo-ar">منتجع الكلاب الفاخر</span></div></a><nav class="nav-links" aria-label="روابط التنقل">
+    <a href="index.html" class="nav-link">الرئيسية</a>
+    <a href="about.html" class="nav-link">من نحن</a>
+    <a href="video.html" class="nav-link">الفيديو</a>
+    <a href="services.html" class="nav-link">الخدمات</a>
+    <a href="packages.html" class="nav-link">الحزم</a>
+    <a href="rooms.html" class="nav-link">الغرف</a>
+    <a href="grooming.html" class="nav-link">الحلاقة</a>
+    <a href="outdoor.html" class="nav-link">الخارجية</a>
+    <a href="veterinary.html" class="nav-link">البيطري</a>
+    <a href="gallery.html" class="nav-link">المعرض</a>
+    <a href="testimonials.html" class="nav-link">آراء العملاء</a>
+    <a href="faq.html" class="nav-link">الأسئلة</a>
+    <a href="contact.html" class="nav-link">تواصل</a>
+  </nav><a href="contact.html" class="nav-cta">احجز الآن ✦</a><button class="nav-hamburger" aria-label="القائمة"><span></span><span></span><span></span></button></nav>
+<div class="nav-mobile"><a href="index.html" class="nav-link">الرئيسية</a><a href="about.html" class="nav-link">من نحن</a><a href="video.html" class="nav-link">الفيديو</a><a href="services.html" class="nav-link">الخدمات</a><a href="packages.html" class="nav-link">الحزم</a><a href="rooms.html" class="nav-link">الغرف</a><a href="grooming.html" class="nav-link">الحلاقة</a><a href="outdoor.html" class="nav-link">الخارجية</a><a href="veterinary.html" class="nav-link">البيطري</a><a href="gallery.html" class="nav-link">المعرض</a><a href="testimonials.html" class="nav-link">آراء العملاء</a><a href="faq.html" class="nav-link">الأسئلة</a><a href="contact.html" class="nav-link">تواصل</a></div>
+
+<main id="main">
+<div class="page-hero"><div class="hk-grid"></div><div class="container"><nav class="breadcrumb" aria-label="مسار التنقل"><a href="index.html">الرئيسية</a><span class="sep">/</span><span>الفيديو</span></nav><div class="s-eyebrow reveal">فيديوهاتنا</div><h1 class="s-title reveal" style="font-size:clamp(36px,5vw,64px)">شاهد <em>عالمنا</em></h1><p class="s-body reveal" style="margin-bottom:0">جولة مرئية داخل مرافقنا الفاخرة وكيف نقضي يومنا مع أصدقائنا الأوفياء.</p></div></div>
+
+<section class="section"><div class="container">
+  <div class="video-grid">
+    <!-- 1. جولة في المنتجع -->
+    <div class="video-card reveal">
+      <div class="video-wrapper">
+        <video controls preload="metadata" playsinline>
+          <source src="../video/video1.mp4" type="video/mp4">
+          متصفحك لا يدعم تشغيل الفيديو.
+        </video>
+      </div>
+      <div class="video-info">
+        <div class="video-title">جولة داخل المنتجع</div>
+        <div class="video-desc">تعرف على مرافقنا الفاخرة المصممة خصيصاً لراحة وسعادة كلبك.</div>
+      </div>
+    </div>
+
+    <!-- 2. يوم في حياة كلب -->
+    <div class="video-card reveal">
+      <div class="video-wrapper">
+        <video controls preload="metadata" playsinline>
+          <source src="../video/video2.mp4" type="video/mp4">
+          متصفحك لا يدعم تشغيل الفيديو.
+        </video>
+      </div>
+      <div class="video-info">
+        <div class="video-title">يوم مليء بالمغامرات</div>
+        <div class="video-desc">شاهد كيف يقضي أصدقاؤنا الأوفياء يومهم بين اللعب والتدريب والاسترخاء.</div>
+      </div>
+    </div>
+
+    <!-- 3. نصائح تدريبية -->
+    <div class="video-card reveal">
+      <div class="video-wrapper">
+        <video controls preload="metadata" playsinline>
+          <source src="../video/video3.mp4" type="video/mp4">
+          متصفحك لا يدعم تشغيل الفيديو.
+        </video>
+      </div>
+      <div class="video-info">
+        <div class="video-title">نصائح من خبرائنا</div>
+        <div class="video-desc">مقتطفات من جلسات التدريب الاحترافية التي نقدمها لتعديل السلوك والطاعة.</div>
+      </div>
+    </div>
+
+    <!-- 4. حرية في الهواء الطلق -->
+    <div class="video-card reveal">
+      <div class="video-wrapper">
+        <video controls preload="metadata" playsinline>
+          <source src="../video/video4.mp4" type="video/mp4">
+          متصفحك لا يدعم تشغيل الفيديو.
+        </video>
+      </div>
+      <div class="video-info">
+        <div class="video-title">حرية في الهواء الطلق</div>
+        <div class="video-desc">الكلاب تستمتع بالجري واللعب في مساحاتنا الخارجية الآمنة والواسعة.</div>
+      </div>
+    </div>
+
+    <!-- 5. أذكى سلالات الكلاب -->
+    <div class="video-card reveal">
+      <div class="video-wrapper">
+        <video controls preload="metadata" playsinline>
+          <source src="../video/video5.mp4" type="video/mp4">
+          متصفحك لا يدعم تشغيل الفيديو.
+        </video>
+      </div>
+      <div class="video-info">
+        <div class="video-title">أذكى سلالات الكلاب</div>
+        <div class="video-desc">تعرف على أذكى أنواع الكلاب في العالم وقدراتها المذهلة على التعلم وفهم الأوامر.</div>
+      </div>
+    </div>
+
+    <!-- 6. تعامل الكلاب مع الأطفال -->
+    <div class="video-card reveal">
+      <div class="video-wrapper">
+        <video controls preload="metadata" playsinline>
+          <source src="../video/video6.mp4" type="video/mp4">
+          متصفحك لا يدعم تشغيل الفيديو.
+        </video>
+      </div>
+      <div class="video-info">
+        <div class="video-title">تعامل الكلاب مع الأطفال</div>
+        <div class="video-desc">شاهد اللحظات اللطيفة والآمنة التي تجمع بين الكلاب والأطفال، وكيفية بناء علاقة صداقة متينة بينهم.</div>
+      </div>
+    </div>
+  </div>
+</div></section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-logo">
+          <div class="nav-logo-icon">🐾</div>
+          <div class="nav-logo-text"><span class="nav-logo-en">Loving Homes</span><span class="nav-logo-ar">منتجع الكلاب الفاخر</span></div>
+        </div>
+        <p class="footer-brand-desc">منتجع فاخر للكلاب في قلب هونج كونج. نوفر بيئة آمنة ومريحة مليئة بالحب والرعاية لكلبك المحبوب.</p>
+        <div class="footer-social" role="list" aria-label="وسائل التواصل الاجتماعي">
+          <a href="#" role="listitem" aria-label="فيسبوك">📘</a>
+          <a href="#" role="listitem" aria-label="إنستغرام">📷</a>
+          <a href="#" role="listitem" aria-label="واتساب">💬</a>
+          <a href="#" role="listitem" aria-label="يوتيوب">▶️</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">الصفحات</div>
+        <ul class="footer-links" role="list">
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="about.html">من نحن</a></li>
+          <li><a href="video.html">الفيديو</a></li>
+          <li><a href="services.html">الخدمات</a></li>
+          <li><a href="packages.html">الحزم والأسعار</a></li>
+          <li><a href="gallery.html">المعرض</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">خدماتنا</div>
+        <ul class="footer-links" role="list">
+          <li><a href="grooming.html">صالون الحلاقة</a></li>
+          <li><a href="rooms.html">الغرف الفاخرة</a></li>
+          <li><a href="veterinary.html">الرعاية البيطرية</a></li>
+          <li><a href="outdoor.html">المرافق الخارجية</a></li>
+          <li><a href="testimonials.html">آراء العملاء</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">تواصل معنا</div>
+        <div class="footer-contact-item"><span class="fci-icon">📍</span><span class="fci-text">Tsim Sha Tsui، هونج كونج</span></div>
+        <div class="footer-contact-item"><span class="fci-icon">📞</span><span class="fci-text">+852 1234 5678</span></div>
+        <div class="footer-contact-item"><span class="fci-icon">✉️</span><span class="fci-text"><a href="mailto:info@lovinghomes.hk">info@lovinghomes.hk</a></span></div>
+        <div class="footer-contact-item"><span class="fci-icon">⏰</span><span class="fci-text">مفتوح 24/7 للطوارئ البيطرية</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Loving Homes Hong Kong. جميع الحقوق محفوظة.</span>
+      <div style="display:flex;gap:20px">
+        <a href="faq.html">الأسئلة الشائعة</a>
+        <a href="contact.html">تواصل معنا</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/app.js"></script>
+</body>
+</html>
